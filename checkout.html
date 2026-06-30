@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — ORIVIZ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* Override design tokens for a beautiful Light Theme on checkout */
+    :root {
+      --color-bg: #ffffff;
+      --color-text: #111111;
+      --color-gridline: #e5e5e5;
+      --color-bg-alt: #fafafa;
+      --color-product-bg: #f5f5f5;
+      --border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Instrument Sans', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── Logo & Header/Footer Adjustments ── */
+    .logo-img {
+      filter: invert(1);
+    }
+    
+    .footer-col a {
+      color: #111111 !important;
+    }
+    .footer-col a:hover {
+      color: var(--color-accent) !important;
+    }
+    .footer-col h3 {
+      color: #111111 !important;
+      opacity: 0.6 !important;
+    }
+    .footer-bottom {
+      color: #111111 !important;
+      opacity: 0.6 !important;
+    }
+    .footer-social-row a {
+      color: #111111 !important;
+    }
+
+    /* ── Layout ── */
+    .checkout-layout {
+      max-width: 1000px; margin: 48px auto; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 380px; gap: 48px;
+      flex: 1;
+    }
+
+    /* ── Form ── */
+    .form-section h2 {
+      font-size: 16px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 2px; margin-bottom: 28px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .form-section h2 .step {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--color-accent); color: #000; font-size: 13px;
+      font-weight: 700; display: flex; align-items: center;
+      justify-content: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block; font-size: 12px; text-transform: uppercase;
+      letter-spacing: 1px; color: rgba(0, 0, 0, 0.6) !important;
+      margin-bottom: 8px; font-weight: 600;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%; padding: 14px 16px;
+      background: #ffffff !important; color: #111111 !important;
+      border: 1px solid rgba(0, 0, 0, 0.15) !important; border-radius: 8px;
+      font-family: inherit; font-size: 15px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--color-accent) !important;
+      box-shadow: 0 0 0 3px rgba(253, 134, 112, 0.15) !important;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder {
+      color: rgba(0, 0, 0, 0.4) !important;
+    }
+    .form-group textarea {
+      resize: vertical; min-height: 80px;
+    }
+    .form-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+
+    /* ── COD badge ── */
+    .cod-badge {
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px 20px; background: rgba(253, 134, 112, 0.08) !important;
+      border: 1px solid rgba(253, 134, 112, 0.2) !important;
+      border-radius: 12px; margin-bottom: 32px;
+    }
+    .cod-badge svg { flex-shrink: 0; }
+    .cod-badge p {
+      font-size: 13px; color: rgba(0, 0, 0, 0.8) !important;
+      line-height: 1.5;
+    }
+    .cod-badge strong { color: var(--color-accent); }
+
+    /* ── Order summary sidebar ── */
+    .order-summary {
+      position: sticky; top: 120px;
+      background: #fafafa !important; border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      border-radius: 12px; padding: 28px;
+      height: fit-content;
+    }
+    .order-summary h3 {
+      font-size: 14px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 2px; margin-bottom: 20px;
+      padding-bottom: 16px; border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+      color: #111111 !important;
+    }
+
+    .summary-item {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 16px; padding-bottom: 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    }
+    .summary-item:last-of-type { border-bottom: none !important; }
+    .summary-item-img {
+      width: 56px; height: 56px; border-radius: 8px;
+      background: #e5e5e5; flex-shrink: 0;
+      position: relative;
+    }
+    .summary-item-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+    .summary-item-qty {
+      position: absolute; top: -8px; right: -8px;
+      width: 22px; height: 22px; background: var(--color-accent);
+      color: #000; font-size: 11px; font-weight: 700;
+      border-radius: 50%; display: flex;
+      align-items: center; justify-content: center;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      z-index: 10;
+    }
+    .summary-item-info { flex: 1; }
+    .summary-item-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; color: #111111 !important; }
+    .summary-item-price { font-size: 13px; color: rgba(0, 0, 0, 0.6) !important; }
+
+    .coupon-section {
+      border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    }
+    .summary-totals { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.08) !important; }
+    .summary-line {
+      display: flex; justify-content: space-between;
+      font-size: 13px; color: rgba(0, 0, 0, 0.7) !important;
+      margin-bottom: 10px;
+    }
+    .summary-line.grand-total {
+      font-size: 18px; font-weight: 700; color: #111111 !important;
+      margin-top: 16px; padding-top: 16px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08) !important; margin-bottom: 0;
+    }
+    .summary-line.grand-total .amount { color: var(--color-accent); }
+
+    /* ── Submit ── */
+    .submit-btn {
+      display: block; width: 100%; margin-top: 32px;
+      padding: 16px; background: var(--color-accent); color: #000;
+      border: none; font-size: 14px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 2px;
+      border-radius: 9999px; cursor: pointer;
+      transition: all 0.3s;
+    }
+    .submit-btn:hover { opacity: 0.85; transform: translateY(-2px); }
+    .submit-btn:disabled {
+      opacity: 0.5; cursor: not-allowed; transform: none;
+    }
+
+    /* ── Success ── */
+    .success-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.6) !important; z-index: 10000;
+      align-items: center; justify-content: center;
+    }
+    .success-overlay.active { display: flex; }
+    .success-card {
+      background: #ffffff !important; border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      border-radius: 16px; padding: 48px; text-align: center;
+      max-width: 420px; width: 90%;
+      color: #111111 !important;
+      animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .success-icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      border: 2px solid var(--color-accent); margin: 0 auto 24px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .success-card h2 {
+      font-size: 22px; font-weight: 700; margin-bottom: 12px;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: #111111 !important;
+    }
+    .success-card p {
+      color: rgba(0, 0, 0, 0.7) !important; font-size: 14px;
+      line-height: 1.6; margin-bottom: 8px;
+    }
+    .order-id {
+      color: var(--color-accent); font-weight: 700; font-size: 16px;
+      margin: 16px 0;
+    }
+    .success-card a {
+      display: inline-block; margin-top: 24px;
+      padding: 14px 40px; background: var(--color-accent); color: #000;
+      text-decoration: none; font-weight: 600; font-size: 13px;
+      text-transform: uppercase; letter-spacing: 1px;
+      border-radius: 9999px; transition: all 0.3s;
+    }
+    .success-card a:hover { opacity: 0.85; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .checkout-layout {
+        grid-template-columns: 1fr; gap: 32px;
+      }
+      .order-summary { position: static; order: -1; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    /* ── Coupons ── */
+    .apply-coupon-btn {
+      background: transparent;
+      border: 1px solid var(--color-accent);
+      color: var(--color-accent);
+      border-radius: 8px;
+      padding: 0 16px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .apply-coupon-btn:hover {
+      background-color: var(--color-accent);
+      color: #000000;
+    }
+
+    /* ── Search & Drawers scope adjustments ── */
+    .search-modal {
+      background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+    .search-modal-inner {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.1) !important;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+    }
+    .search-input-wrap {
+      border-bottom: 2px solid #111111 !important;
+    }
+    .search-input-wrap input {
+      color: #111111 !important;
+    }
+    .search-input-wrap input::placeholder {
+      color: rgba(0, 0, 0, 0.4) !important;
+    }
+    .search-close-hint {
+      color: rgba(0, 0, 0, 0.5) !important;
+    }
+    .drawer-close {
+      color: #111111 !important;
+    }
+    .drawer-header {
+      border-bottom: var(--gridline-width) solid var(--border-color) !important;
+      color: #111111 !important;
+    }
+    .menu-drawer nav a {
+      color: #111111 !important;
+      border-bottom: var(--gridline-width) solid var(--border-color) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== OVERLAY ====== -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- ====== MENU DRAWER ====== -->
+  <aside class="menu-drawer" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <span style="font-size:0.85rem;">Menu</span>
+      <button id="btn-menu-close" class="drawer-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Fermer
+      </button>
+    </div>
+    <nav id="drawer-nav"></nav>
+    <div class="drawer-footer">
+      <a href="https://www.instagram.com/oriviz.eyewear/" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://www.facebook.com/oriviz.eyewear" target="_blank" rel="noopener" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.tiktok.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="TikTok" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .8.11V9.4a6.27 6.27 0 0 0-3.11-.12A6.35 6.35 0 0 0 2 15.63a6.35 6.35 0 0 0 9.21 5.56 6.3 6.3 0 0 0 3.32-5.46V8.66A8.3 8.3 0 0 0 19.59 12V6.69z"/></svg></a>
+      <a href="https://www.youtube.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="YouTube" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      <a href="https://www.pinterest.com/oriviz/" target="_blank" rel="noopener" aria-label="Pinterest" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.27 1.029-.999 2.321-1.49 3.116C9.937 23.77 10.942 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+      <a href="https://www.linkedin.com/company/oriviz/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </aside>
+
+  <!-- ====== CART DRAWER ====== -->
+  <aside class="cart-drawer" aria-label="Shopping cart">
+    <div class="drawer-header">
+      <div class="cart-title-row">
+        <h2>Votre panier</h2>
+        <span>(<span id="cart-count">0</span>)</span>
+      </div>
+      <button id="btn-cart-close" class="drawer-close" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Fermer
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div id="cart-empty" class="cart-empty-msg">Votre panier est actuellement vide.</div>
+    <div class="cart-footer" id="cart-footer-section" style="display:none;">
+      <div class="cart-subtotal">
+        <span>Sous-total</span>
+        <span id="cart-subtotal-amount">0,00 DH</span>
+      </div>
+      <div class="cart-shipping-note">Livraison gratuite sur tout le Maroc.</div>
+      <button id="btn-checkout" class="btn-checkout">Passer la commande</button>
+      <a href="#" id="cart-continue-shopping" class="cart-continue">Continuer vos achats</a>
+    </div>
+  </aside>
+
+  <!-- ====== SEARCH MODAL ====== -->
+  <div id="search-modal" class="search-modal">
+    <div class="search-modal-inner">
+      <div class="search-input-wrap">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search-input" placeholder="Rechercher des produits..." autocomplete="off">
+        <button id="search-close" style="font-size:0.85rem;opacity:0.6;">ÉCHAP</button>
+      </div>
+      <div id="search-results" class="search-results"></div>
+      <div class="search-close-hint">Appuyez sur ÉCHAP ou cliquez à l'extérieur pour fermer</div>
+    </div>
+  </div>
+
+  <!-- ====== PRODUCT MODAL ====== -->
+  <div id="product-modal" class="product-modal">
+    <button id="modal-close" class="modal-close-btn" aria-label="Close">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="product-modal-content">
+      <div class="modal-image">
+        <img id="modal-product-image" src="" alt="">
+      </div>
+      <div class="modal-details">
+        <h2 id="modal-product-name"></h2>
+        <div class="modal-price" id="modal-product-price"></div>
+        <p class="modal-desc" id="modal-product-desc"></p>
+        <button id="modal-add-btn" class="modal-add-btn" data-id="">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <button id="btn-menu" class="header-btn btn-menu-toggle" aria-label="Open menu">
+          <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="header-center">
+        <a href="/" class="logo-link">
+          <img class="logo-img" src="/images/logo.png" alt="ORIVIZ">
+        </a>
+      </div>
+
+      <div class="header-right">
+        <button id="btn-search" class="header-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button id="btn-cart" class="header-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span id="header-cart-count" class="cart-count" style="display:none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <div class="checkout-layout">
+    <!-- Form -->
+    <div class="form-section">
+      <div class="cod-badge">
+        <svg width="24" height="24" fill="none" stroke="#FD8670" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+        <p><strong>Paiement à la livraison</strong> — Payez en espèces à la réception de votre commande. Livraison gratuite sur tout le Maroc.</p>
+      </div>
+
+      <h2><span class="step">1</span> Informations personnelles</h2>
+
+      <form id="cod-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">Prénom</label>
+            <input type="text" id="first-name" required placeholder="Votre prénom">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Nom</label>
+            <input type="text" id="last-name" required placeholder="Votre nom">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" required placeholder="06 XX XX XX XX">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email (optionnel)</label>
+          <input type="email" id="email" placeholder="votre@email.com">
+        </div>
+
+        <h2 style="margin-top: 36px;"><span class="step">2</span> Adresse de livraison</h2>
+
+        <div class="form-group">
+          <label for="address">Adresse complète</label>
+          <input type="text" id="address" required placeholder="Rue, numéro, quartier...">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">Ville</label>
+            <input type="text" id="city" required placeholder="Votre ville">
+          </div>
+          <div class="form-group">
+            <label for="zip">Code postal</label>
+            <input type="text" id="zip" placeholder="Ex: 20000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Notes (optionnel)</label>
+          <textarea id="notes" placeholder="Instructions de livraison, remarques..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">
+          Confirmer la commande
+        </button>
+      </form>
+    </div>
+
+    <!-- Summary -->
+    <aside class="order-summary" id="order-summary">
+      <h3>Récapitulatif</h3>
+      <div id="summary-items"></div>
+
+      <!-- Coupon Section -->
+      <div class="coupon-section" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(0,0,0,0.08);">
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="coupon-code" style="font-size: 11px;">Code promo / Coupon</label>
+          <div style="display: flex; gap: 8px; margin-top: 6px;">
+            <input type="text" id="coupon-code" placeholder="Ex: ORIVIZ10" style="padding: 10px 12px; font-size: 13px; flex: 1; text-transform: uppercase;">
+            <button type="button" id="apply-coupon-btn" class="apply-coupon-btn">Appliquer</button>
+          </div>
+        </div>
+        <div id="coupon-message" style="margin-top: 8px; font-size: 12px; min-height: 18px;"></div>
+      </div>
+
+      <div class="summary-totals" id="summary-totals"></div>
+    </aside>
+  </div>
+
+  <!-- Success overlay -->
+  <div class="success-overlay" id="success-overlay">
+    <div class="success-card">
+      <div class="success-icon">
+        <svg width="32" height="32" fill="none" stroke="#FD8670" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h2>Commande confirmée !</h2>
+      <p>Merci pour votre achat. Notre équipe va vous contacter sur le numéro <strong id="success-phone"></strong> pour confirmer les détails de la livraison.</p>
+      <div class="order-id" id="success-order-id"></div>
+      <p style="font-size: 12px;">Gardez ce numéro de commande pour le suivi.</p>
+      <a href="/">Retour à la boutique</a>
+    </div>
+  </div>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Boutique</h3>
+        <a href="/#frames">Montures Optiques</a>
+        <a href="/contact">Contactez-nous</a>
+      </div>
+      <div class="footer-col">
+        <h3>Informations</h3>
+        <a href="/contact">Échanges &amp; Retours</a>
+        <a href="/contact">FAQ</a>
+        <a href="/contact">Politique de confidentialité</a>
+      </div>
+      <div class="footer-col">
+        <h3>Suivez-nous</h3>
+        <div class="footer-social-row" style="display: flex; gap: 16px; margin-top: 12px; align-items: center;">
+          <a href="https://www.instagram.com/oriviz.eyewear/" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.facebook.com/oriviz.eyewear" target="_blank" rel="noopener" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.tiktok.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="TikTok" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .8.11V9.4a6.27 6.27 0 0 0-3.11-.12A6.35 6.35 0 0 0 2 15.63a6.35 6.35 0 0 0 9.21 5.56 6.3 6.3 0 0 0 3.32-5.46V8.66A8.3 8.3 0 0 0 19.59 12V6.69z"/></svg></a>
+          <a href="https://www.youtube.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="YouTube" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.pinterest.com/oriviz/" target="_blank" rel="noopener" aria-label="Pinterest" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.27 1.029-.999 2.321-1.49 3.116C9.937 23.77 10.942 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+          <a href="https://www.linkedin.com/company/oriviz/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026, ORIVIZ</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/config.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+    let appliedCoupon = null;
+
+    // ── Render summary sidebar ──
+    function renderSummary() {
+      const items = Cart.getItems();
+      const summaryItems = document.getElementById('summary-items');
+      const summaryTotals = document.getElementById('summary-totals');
+
+      if (items.length === 0) {
+        window.location.href = '/cart.html';
+        return;
+      }
+
+      summaryItems.innerHTML = items.map(item => `
+        <a href="/products/${item.id}" class="summary-item" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 14px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.08);">
+          <div class="summary-item-img">
+            <img src="${item.image.startsWith('/') ? item.image : '/' + item.image}" alt="${item.name}">
+            <div class="summary-item-qty">${item.qty}</div>
+          </div>
+          <div class="summary-item-info">
+            <div class="summary-item-name" style="transition: color 0.2s;">${item.name}</div>
+            <div class="summary-item-price">${(parseFloat(item.price) * item.qty).toLocaleString('fr-FR')} DH</div>
+          </div>
+        </a>
+      `).join('');
+
+      const subtotal = Cart.getTotal();
+      let discountAmount = 0;
+
+      if (appliedCoupon) {
+        if (appliedCoupon.type === 'percentage') {
+          discountAmount = Math.round(subtotal * (appliedCoupon.value / 100));
+        } else if (appliedCoupon.type === 'fixed') {
+          discountAmount = appliedCoupon.value;
+        }
+      }
+
+      const total = Math.max(0, subtotal - discountAmount);
+
+      let totalsHtml = `
+        <div class="summary-line">
+          <span>Sous-total</span>
+          <span>${subtotal.toLocaleString('fr-FR')} DH</span>
+        </div>
+      `;
+
+      if (discountAmount > 0) {
+        totalsHtml += `
+          <div class="summary-line" style="color: #ff4444; font-weight: 500;">
+            <span>Réduction (${appliedCoupon.code})</span>
+            <span>-${discountAmount.toLocaleString('fr-FR')} DH</span>
+          </div>
+        `;
+      }
+
+      totalsHtml += `
+        <div class="summary-line">
+          <span>Livraison</span>
+          <span style="color: #4ade80;">Gratuite</span>
+        </div>
+        <div class="summary-line grand-total">
+          <span>Total</span>
+          <span class="amount">${total.toLocaleString('fr-FR')} DH</span>
+        </div>
+      `;
+
+      summaryTotals.innerHTML = totalsHtml;
+    }
+
+    // ── Coupon Handler ──
+    document.getElementById('apply-coupon-btn').addEventListener('click', function() {
+      const codeInput = document.getElementById('coupon-code');
+      const msgEl = document.getElementById('coupon-message');
+      const code = codeInput.value.trim().toUpperCase();
+
+      if (!code) {
+        msgEl.style.color = '#ff4444';
+        msgEl.textContent = 'Veuillez saisir un code.';
+        return;
+      }
+
+      const coupons = CONFIG.coupons || [];
+      const found = coupons.find(c => c.code === code);
+
+      if (found) {
+        appliedCoupon = found;
+        msgEl.style.color = '#4ade80';
+        msgEl.innerHTML = `Code <strong>${code}</strong> appliqué ! <a href="#" id="remove-coupon-link" style="color: #ff4444; margin-left: 8px; text-decoration: underline;">Retirer</a>`;
+        codeInput.value = '';
+        renderSummary();
+
+        document.getElementById('remove-coupon-link').addEventListener('click', function(e) {
+          e.preventDefault();
+          appliedCoupon = null;
+          msgEl.textContent = '';
+          renderSummary();
+        });
+      } else {
+        msgEl.style.color = '#ff4444';
+        msgEl.textContent = 'Code promo invalide.';
+      }
+    });
+
+    // ── Form submission ──
+    document.getElementById('cod-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Traitement en cours...';
+
+      const subtotal = Cart.getTotal();
+      let discountAmount = 0;
+
+      if (appliedCoupon) {
+        if (appliedCoupon.type === 'percentage') {
+          discountAmount = Math.round(subtotal * (appliedCoupon.value / 100));
+        } else if (appliedCoupon.type === 'fixed') {
+          discountAmount = appliedCoupon.value;
+        }
+      }
+
+      const order = {
+        id: 'ORV-' + Math.floor(100000 + Math.random() * 900000),
+        customer: {
+          firstName: document.getElementById('first-name').value,
+          lastName: document.getElementById('last-name').value,
+          phone: document.getElementById('phone').value,
+          email: document.getElementById('email').value,
+        },
+        shipping: {
+          address: document.getElementById('address').value,
+          city: document.getElementById('city').value,
+          zip: document.getElementById('zip').value,
+          notes: document.getElementById('notes').value,
+        },
+        items: Cart.getItems(),
+        subtotal: subtotal,
+        discount: appliedCoupon ? {
+          code: appliedCoupon.code,
+          amount: discountAmount
+        } : null,
+        total: Math.max(0, subtotal - discountAmount),
+        currency: 'DH',
+        paymentMethod: 'COD',
+        date: new Date().toISOString(),
+        status: 'pending',
+      };
+
+      // Send to Google Sheets if configured
+      let sendPromise = Promise.resolve();
+      if (typeof CONFIG !== 'undefined' && CONFIG.googleSheetsWebhookUrl) {
+        const itemsListText = order.items.map(item => `${item.name} (x${item.qty})`).join(', ');
+        
+        const payload = {
+          orderId: order.id,
+          date: new Date(order.date).toLocaleString('fr-FR'),
+          firstName: order.customer.firstName,
+          lastName: order.customer.lastName,
+          phone: order.customer.phone,
+          email: order.customer.email || '',
+          address: order.shipping.address,
+          city: order.shipping.city,
+          zip: order.shipping.zip || '',
+          notes: order.shipping.notes || '',
+          items: itemsListText,
+          total: order.total + ' DH',
+          coupon: order.discount ? order.discount.code : ''
+        };
+
+        sendPromise = fetch(CONFIG.googleSheetsWebhookUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        }).catch(err => console.error('Erreur d\'envoi Google Sheet:', err));
+      }
+
+      // Save order local state and show success
+      sendPromise.finally(() => {
+        setTimeout(() => {
+          let orders = JSON.parse(localStorage.getItem('oriviz_orders') || '[]');
+          orders.push(order);
+          localStorage.setItem('oriviz_orders', JSON.stringify(orders));
+
+          // Clear cart
+          Cart.clear();
+
+          // Show success
+          document.getElementById('success-phone').textContent = order.customer.phone;
+          document.getElementById('success-order-id').textContent = order.id;
+          document.getElementById('success-overlay').classList.add('active');
+        }, 800);
+      });
+    });
+
+    renderSummary();
+  </script>
+</body>
+</html>

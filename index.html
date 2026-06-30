@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ORIVIZ — Lunettes de créateur fabriquées à la main en acétate italien. Montures optiques et lunettes de soleil premium inspirées par l'art, livrées gratuitement au Maroc.">
+  <meta name="keywords" content="lunettes maroc, lunettes de soleil maroc, montures optiques maroc, lunettes créateur, acétate italien, lunettes haut de gamme, oriviz, eyewear casablanca, acheter lunettes en ligne maroc, lunettes de vue maroc">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="ORIVIZ | Lunettes de Créateur Fabriquées à la Main — Maroc">
+  <meta property="og:description" content="Découvrez les lunettes ORIVIZ fabriquées artisanalement en acétate italien. Livraison gratuite sur tout le Maroc.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_MA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ORIVIZ | Lunettes de Créateur — Maroc">
+  <meta name="twitter:description" content="Lunettes premium fabriquées à la main, inspirées par l'art et la culture. Livraison gratuite au Maroc.">
+  <title>ORIVIZ | Official website – Oriviz</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+
+  <!-- ====== OVERLAY ====== -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- ====== MENU DRAWER ====== -->
+  <aside class="menu-drawer" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <span style="font-size:0.85rem;">Menu</span>
+      <button id="btn-menu-close" class="drawer-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Fermer
+      </button>
+    </div>
+    <nav id="drawer-nav"></nav>
+    <div class="drawer-footer">
+      <a href="https://www.instagram.com/oriviz.eyewear/" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://www.facebook.com/oriviz.eyewear" target="_blank" rel="noopener" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.tiktok.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="TikTok" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .8.11V9.4a6.27 6.27 0 0 0-3.11-.12A6.35 6.35 0 0 0 2 15.63a6.35 6.35 0 0 0 9.21 5.56 6.3 6.3 0 0 0 3.32-5.46V8.66A8.3 8.3 0 0 0 19.59 12V6.69z"/></svg></a>
+      <a href="https://www.youtube.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="YouTube" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      <a href="https://www.pinterest.com/oriviz/" target="_blank" rel="noopener" aria-label="Pinterest" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.27 1.029-.999 2.321-1.49 3.116C9.937 23.77 10.942 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+      <a href="https://www.linkedin.com/company/oriviz/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </aside>
+
+  <!-- ====== CART DRAWER ====== -->
+  <aside class="cart-drawer" aria-label="Shopping cart">
+    <div class="drawer-header">
+      <div class="cart-title-row">
+        <h2>Votre panier</h2>
+        <span>(<span id="cart-count">0</span>)</span>
+      </div>
+      <button id="btn-cart-close" class="drawer-close" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Fermer
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div id="cart-empty" class="cart-empty-msg">Votre panier est actuellement vide.</div>
+    <div class="cart-footer" id="cart-footer-section" style="display:none;">
+      <div class="cart-subtotal">
+        <span>Sous-total</span>
+        <span id="cart-subtotal-amount">0,00 DH</span>
+      </div>
+      <div class="cart-shipping-note">Livraison gratuite sur tout le Maroc.</div>
+      <button id="btn-checkout" class="btn-checkout">Passer la commande</button>
+      <a href="#" id="cart-continue-shopping" class="cart-continue">Continuer vos achats</a>
+    </div>
+  </aside>
+
+  <!-- ====== SEARCH MODAL ====== -->
+  <div id="search-modal" class="search-modal">
+    <div class="search-modal-inner">
+      <div class="search-input-wrap">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search-input" placeholder="Rechercher des produits..." autocomplete="off">
+        <button id="search-close" style="font-size:0.85rem;opacity:0.6;">ÉCHAP</button>
+      </div>
+      <div id="search-results" class="search-results"></div>
+      <div class="search-close-hint">Appuyez sur ÉCHAP ou cliquez à l'extérieur pour fermer</div>
+    </div>
+  </div>
+
+  <!-- ====== PRODUCT MODAL ====== -->
+  <div id="product-modal" class="product-modal">
+    <button id="modal-close" class="modal-close-btn" aria-label="Close">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="product-modal-content">
+      <div class="modal-image">
+        <img id="modal-product-image" src="" alt="">
+      </div>
+      <div class="modal-details">
+        <h2 id="modal-product-name"></h2>
+        <div class="modal-price" id="modal-product-price"></div>
+        <p class="modal-desc" id="modal-product-desc"></p>
+        <button id="modal-add-btn" class="modal-add-btn" data-id="">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header" id="home">
+    <div class="header-inner">
+      <div class="header-left">
+        <button id="btn-menu" class="header-btn btn-menu-toggle" aria-label="Open menu">
+          <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="header-center">
+        <a href="#home" class="logo-link">
+          <img class="logo-img" src="/images/logo.png" alt="ORIVIZ">
+        </a>
+      </div>
+
+      <div class="header-right">
+        <button id="btn-search" class="header-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button id="btn-cart" class="header-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span id="header-cart-count" class="cart-count" style="display:none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main>
+
+    <!-- Marquee 1 -->
+    <section class="marquee-section marquee-section--accent">
+      <div class="marquee-container"></div>
+    </section>
+
+    <!-- Hero Slider -->
+    <section class="hero-section">
+      <div class="hero-slider" id="hero-slider"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Lunettes de créateur inspirées par l'art.</h1>
+        <p class="hero-desc">Découvrez notre collection de lunettes haut de gamme conçues pour affirmer votre style.</p>
+        <a href="/shop" class="hero-cta-btn">Acheter la collection</a>
+      </div>
+    </section>
+
+    <!-- Marquee 2 -->
+    <section class="marquee-section marquee-section--accent">
+      <div class="marquee-container"></div>
+    </section>
+
+    <!-- ===== PRESCRIPTION GLASSES ===== -->
+    <section id="frames" class="section--accent">
+      <div class="section-heading">
+        <h2>Nos lunettes de soleil</h2>
+      </div>
+      <div class="product-grid" id="grid-frames"></div>
+      <div class="section-footer">
+        <a href="/shop" class="view-all-link">Voir tout &rarr;</a>
+      </div>
+    </section>
+    <!-- ===== BRAND STORY SECTION ===== -->
+    <section class="brand-story-section">
+      <div class="brand-story-container">
+        <div class="brand-story-content">
+          <h2 class="brand-story-title">L'Esprit Oriviz</h2>
+          <p class="brand-story-text">
+            Inspirée par l'art, le design et la culture urbaine, Oriviz redéfinit la lunetterie contemporaine. Nos montures sont dessinées avec passion et fabriquées à la main avec les meilleurs acétates et verres de précision pour offrir une signature visuelle unique. Chaque paire raconte une histoire d'artisanat et d'audace stylistique.
+          </p>
+          <a href="/about" class="brand-story-btn">En savoir plus</a>
+        </div>
+        <div class="brand-story-image-wrap">
+          <img src="/images/oriviz-brand.png" alt="L'Esprit Oriviz" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- ===== PRODUCT CAROUSEL SECTION ===== -->
+    <section class="product-carousel-section">
+      <div class="product-carousel-header">
+        <div class="product-carousel-nav">
+          <button id="prod-prev" class="prod-nav-btn" aria-label="Précédent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button id="prod-next" class="prod-nav-btn" aria-label="Suivant">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-carousel-container" id="product-slider">
+        <!-- Rendered dynamically via javascript -->
+      </div>
+    </section>
+
+    <!-- ===== VIRTUAL TRY-ON BANNER ===== -->
+    <section class="virtual-tryon-section">
+      <div class="virtual-tryon-container">
+        <div class="virtual-tryon-content">
+          <h2 class="virtual-tryon-title">Voyez comment elles vous vont !</h2>
+          <div class="virtual-tryon-btn-wrapper" id="tryon-wrapper">
+            <button class="virtual-tryon-btn" type="button">
+              <span class="play-icon">&#9654;</span> Commencer l'essai virtuel
+            </button>
+            <span class="virtual-tryon-tooltip">Bientôt disponible !</span>
+          </div>
+        </div>
+        <div class="virtual-tryon-image">
+          <img src="/images/virtual_tryon_mockup.png" alt="Essai Virtuel Oriviz" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STYLE ICONS (UGC CAROUSEL) ===== -->
+    <section class="ugc-section">
+      <div class="ugc-header">
+        <h2 class="ugc-title">Les icônes du style <span class="italic-accent">portent Oriviz</span></h2>
+        <div class="ugc-nav">
+          <button id="ugc-prev" class="ugc-nav-btn" aria-label="Précédent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button id="ugc-next" class="ugc-nav-btn" aria-label="Suivant">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="ugc-carousel-container" id="ugc-carousel">
+        <div class="ugc-card">
+          <img src="images/ugc_lily.png" alt="@LILYROWLAND1">
+          <div class="ugc-handle">@LILYROWLAND1</div>
+        </div>
+        <div class="ugc-card">
+          <img src="images/ugc_sofia.png" alt="@SOFIANCOHELO">
+          <div class="ugc-handle">@SOFIANCOHELO</div>
+        </div>
+        <div class="ugc-card">
+          <img src="images/ugc_iris.png" alt="@IRISLOVEUNICORNS">
+          <div class="ugc-handle">@IRISLOVEUNICORNS</div>
+        </div>
+        <div class="ugc-card">
+          <img src="images/ugc_ella.png" alt="@ELLA.CHRISTO">
+          <div class="ugc-handle">@ELLA.CHRISTO</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOME FAQ SECTION ===== -->
+    <section class="home-faq-section">
+      <div class="home-faq-container">
+        <!-- Left Column: Titles & Button -->
+        <div class="home-faq-info">
+          <h2 class="home-faq-title">Questions<br>Fréquentes</h2>
+          <p class="home-faq-subtitle">Vous avez des questions ou des doutes sur le choix de vos lunettes ? Trouvez la réponse appropriée ici !</p>
+          <a href="/faq" class="home-faq-btn">Toutes les FAQ</a>
+        </div>
+
+        <!-- Right Column: Accordion -->
+        <div class="home-faq-accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>Puis-je utiliser une monture optique pour des lunettes de soleil ?</span>
+              <span class="icon-plus"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                Oui, la plupart de nos montures optiques peuvent être équipées de verres solaires teintés, avec ou sans correction.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>Qu'est-ce que les verres en polycarbonate ?</span>
+              <span class="icon-plus"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                Le polycarbonate est un matériau ultra-léger et extrêmement résistant aux impacts, idéal pour un usage quotidien et les activités sportives de plein air.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>Proposez-vous la livraison gratuite ?</span>
+              <span class="icon-plus"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                Oui, nous offrons la livraison standard gratuite pour toutes les commandes au Maroc sans minimum d'achat.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>Puis-je commander des verres sans correction (plans) ?</span>
+              <span class="icon-plus"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                Absolument. Si vous portez des lunettes uniquement pour le style ou la protection contre la lumière bleue, vous pouvez choisir des verres sans correction (plans).
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>Acceptez-vous les cartes de paiement mutuelles ou assurances ?</span>
+              <span class="icon-plus"></span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                Nous fournissons une facture détaillée et certifiée pour chaque commande afin de vous permettre de demander votre remboursement auprès de votre mutuelle ou assurance santé.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRUSTPILOT REVIEWS CAROUSEL ===== -->
+    <section class="trustpilot-section">
+      <div class="tp-container">
+        <div class="tp-header">
+          <h2 class="tp-title">Nos clients <span class="italic-accent">nous adorent</span></h2>
+          <div class="tp-nav">
+            <button id="tp-prev" class="tp-nav-btn" aria-label="Précédent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button id="tp-next" class="tp-nav-btn" aria-label="Suivant">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+        
+        <div class="tp-carousel-container" id="tp-carousel">
+          <!-- Review 1: Oussama -->
+          <div class="tp-card">
+            <div class="tp-stars">
+              <span class="tp-star-icon">★★★★★</span>
+              <span class="tp-verified"><span class="tp-check">✓</span> Vérifié</span>
+            </div>
+            <h3 class="tp-review-title">Superbe qualité et service impeccable</h3>
+            <p class="tp-review-body">Excellente expérience avec Oriviz. J’ai trouvé exactement la paire de lunettes que je cherchais, à un prix très correct. La livraison a été rapide et les lunettes sont arrivées bien protégées.</p>
+            <div class="tp-reviewer">Oussama</div>
+          </div>
+          
+          <!-- Review 2: Abderrazaq -->
+          <div class="tp-card">
+            <div class="tp-stars">
+              <span class="tp-star-icon">★★★★★</span>
+              <span class="tp-verified"><span class="tp-check">✓</span> Vérifié</span>
+            </div>
+            <h3 class="tp-review-title">I am extremely satisfied</h3>
+            <p class="tp-review-body">I am extremely satisfied with my glasses. The frames are of such excellent quality, being light, sturdy and well-suited for wearing all day long. The design is modern and elegant.</p>
+            <div class="tp-reviewer">Abderrazaq</div>
+          </div>
+
+          <!-- Review 3: Younes -->
+          <div class="tp-card">
+            <div class="tp-stars">
+              <span class="tp-star-icon">★★★★★</span>
+            </div>
+            <h3 class="tp-review-title">Meilleur rapport qualité prix</h3>
+            <p class="tp-review-body">Meilleur rapport qualité prix, je recommande vivement 😎👌</p>
+            <div class="tp-reviewer">Younes</div>
+          </div>
+ 
+          <!-- Review 4: Hamza -->
+          <div class="tp-card">
+            <div class="tp-stars">
+              <span class="tp-star-icon">★★★★★</span>
+            </div>
+            <h3 class="tp-review-title">I’m really impressed with this brand</h3>
+            <p class="tp-review-body">The customer service is friendly and helpful. Delivery was super fast. The sunglasses are truly premium quality stylish, durable, and exactly as described.</p>
+            <div class="tp-reviewer">Hamza</div>
+          </div>
+ 
+          <!-- Review 5: Issam -->
+          <div class="tp-card">
+            <div class="tp-stars">
+              <span class="tp-star-icon">★★★★★</span>
+            </div>
+            <h3 class="tp-review-title">I buy one from you is very top...</h3>
+            <p class="tp-review-body">I buy one from you is very top quality....👍</p>
+            <div class="tp-reviewer">Issam</div>
+          </div>
+ 
+          <!-- Review 6: Aymane -->
+          <div class="tp-card">
+            <div class="tp-stars">
+              <span class="tp-star-icon">★★★★★</span>
+            </div>
+            <h3 class="tp-review-title">Very good quality sunglasses 💯</h3>
+            <p class="tp-review-body">Sunglasses are absolutely beautiful with great materials. Highly recommend this brand.</p>
+            <div class="tp-reviewer">Aymane</div>
+          </div>
+        </div>
+ 
+        <!-- Trustpilot Footer -->
+        <div class="tp-footer">
+          <p>Évalué Excellent. Nos avis sont 5 étoiles.</p>
+          <a href="https://www.trustpilot.com/review/oriviz.com" target="_blank" rel="noopener" class="tp-logo-link">
+            <span class="tp-star-green">★</span> Trustpilot
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <p class="newsletter-text">Accès anticipé à nos collections. Offres exclusives et plus encore à découvrir.</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" placeholder="Adresse e-mail" required autocomplete="email">
+          <button type="submit" class="newsletter-btn">S'abonner &rarr;</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Boutique</h3>
+        <div id="footer-links"></div>
+      </div>
+      <div class="footer-col">
+        <h3>Informations</h3>
+        <a href="/retours">Échanges &amp; Retours</a>
+        <a href="/faq">FAQ</a>
+        <a href="/about">À propos d'Oriviz</a>
+        <a href="/privacy">Politique de confidentialité</a>
+      </div>
+      <div class="footer-col">
+        <h3>Suivez-nous</h3>
+        <div class="footer-social-row" style="display: flex; gap: 16px; margin-top: 12px; align-items: center;">
+          <a href="https://www.instagram.com/oriviz.eyewear/" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.facebook.com/oriviz.eyewear" target="_blank" rel="noopener" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.tiktok.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="TikTok" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .8.11V9.4a6.27 6.27 0 0 0-3.11-.12A6.35 6.35 0 0 0 2 15.63a6.35 6.35 0 0 0 9.21 5.56 6.3 6.3 0 0 0 3.32-5.46V8.66A8.3 8.3 0 0 0 19.59 12V6.69z"/></svg></a>
+          <a href="https://www.youtube.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="YouTube" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.pinterest.com/oriviz/" target="_blank" rel="noopener" aria-label="Pinterest" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.27 1.029-.999 2.321-1.49 3.116C9.937 23.77 10.942 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+          <a href="https://www.linkedin.com/company/oriviz/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026, ORIVIZ</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

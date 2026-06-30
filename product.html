@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunettes ORIVIZ | Monture Artisanale en Acétate Italien</title>
+  <meta name="description" content="Découvrez nos montures ORIVIZ fabriquées à la main en acétate de cellulose Mazzucchelli. Livraison gratuite au Maroc. Qualité premium, design unique.">
+  <meta name="keywords" content="lunettes oriviz, monture acétate, lunettes artisanales maroc, lunettes de vue maroc, lunettes créateur, eyewear premium maroc">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="product">
+  <meta property="og:locale" content="fr_MA">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <style>
+    .product-page-main {
+      flex: 1;
+      padding: 60px 0;
+      background-color: var(--color-bg);
+    }
+    .product-detail-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+    }
+    .product-gallery {
+      width: 100%;
+      position: sticky;
+      top: 120px;
+      height: fit-content;
+    }
+    @media (max-width: 900px) {
+      .product-detail-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .product-gallery {
+        position: relative;
+        top: 0;
+      }
+    }
+    .product-image-wrapper {
+      background: var(--color-product-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: var(--gridline-width) solid var(--border-color);
+    }
+    .product-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .product-image-wrapper:hover img {
+      transform: scale(1.05);
+    }
+    .product-info-panel {
+      display: flex;
+      flex-direction: column;
+    }
+    .back-to-shop {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 24px;
+      transition: color var(--transition-fast);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+    }
+    .back-to-shop:hover {
+      color: var(--color-accent);
+    }
+    .product-info-panel h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .product-price {
+      font-size: 1.4rem;
+      color: var(--color-accent);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .product-description-box {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: var(--gridline-width) solid var(--border-color);
+    }
+    .product-specs {
+      margin-bottom: 32px;
+    }
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .spec-row:last-child {
+      border-bottom: none;
+    }
+    .spec-label {
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .spec-value {
+      color: #ffffff;
+      font-weight: 500;
+    }
+    /* Actions container */
+    .product-actions-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+      width: 100%;
+    }
+    .product-actions-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+      width: 100%;
+    }
+    .quantity-selector-container {
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+    .quantity-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 9999px;
+      width: fit-content;
+      height: 50px;
+      overflow: hidden;
+      padding: 0 4px;
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+    .quantity-btn {
+      background: none;
+      border: none;
+      color: #ffffff;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: all var(--transition-fast);
+      border-radius: 50%;
+    }
+    .quantity-btn:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: var(--color-accent);
+    }
+    .quantity-input {
+      background: none;
+      border: none;
+      color: #ffffff;
+      text-align: center;
+      width: 40px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      -moz-appearance: textfield;
+      pointer-events: none;
+    }
+    .quantity-input::-webkit-outer-spin-button,
+    .quantity-input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    .add-to-cart-btn {
+      flex-grow: 1;
+      height: 50px;
+      padding: 0 24px;
+      background: transparent;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border-radius: 9999px;
+      transition: all var(--transition-fast);
+      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .add-to-cart-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+    }
+    .buy-now-btn {
+      width: 100%;
+      height: 50px;
+      padding: 0 24px;
+      background: var(--color-accent);
+      color: var(--color-accent-contrast);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border-radius: 9999px;
+      transition: all var(--transition-fast);
+      border: 1px solid var(--color-accent);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .buy-now-btn:hover {
+      background: #ffffff;
+      border-color: #ffffff;
+      color: #000000;
+    }
+    
+    /* Accordions */
+    .product-accordions {
+      border-top: var(--gridline-width) solid var(--border-color);
+    }
+    .prod-accordion-item {
+      border-bottom: var(--gridline-width) solid var(--border-color);
+    }
+    .prod-accordion-trigger {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      font-size: 0.9rem;
+      text-align: left;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+    }
+    .prod-accordion-trigger svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      transition: transform 0.3s ease;
+    }
+    .prod-accordion-item.open .prod-accordion-trigger svg {
+      transform: rotate(180deg);
+    }
+    .prod-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .prod-accordion-content p {
+      padding-bottom: 16px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.5;
+    }
+    .prod-accordion-item.open .prod-accordion-content {
+      max-height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== OVERLAY ====== -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- ====== MENU DRAWER ====== -->
+  <aside class="menu-drawer" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <span style="font-size:0.85rem;">Menu</span>
+      <button id="btn-menu-close" class="drawer-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Fermer
+      </button>
+    </div>
+    <nav id="drawer-nav"></nav>
+    <div class="drawer-footer">
+      <a href="https://www.instagram.com/oriviz.eyewear/" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://www.facebook.com/oriviz.eyewear" target="_blank" rel="noopener" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.tiktok.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="TikTok" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .8.11V9.4a6.27 6.27 0 0 0-3.11-.12A6.35 6.35 0 0 0 2 15.63a6.35 6.35 0 0 0 9.21 5.56 6.3 6.3 0 0 0 3.32-5.46V8.66A8.3 8.3 0 0 0 19.59 12V6.69z"/></svg></a>
+      <a href="https://www.youtube.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="YouTube" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      <a href="https://www.pinterest.com/oriviz/" target="_blank" rel="noopener" aria-label="Pinterest" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.27 1.029-.999 2.321-1.49 3.116C9.937 23.77 10.942 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+      <a href="https://www.linkedin.com/company/oriviz/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </aside>
+
+  <!-- ====== CART DRAWER ====== -->
+  <aside class="cart-drawer" aria-label="Shopping cart">
+    <div class="drawer-header">
+      <div class="cart-title-row">
+        <h2>Votre panier</h2>
+        <span>(<span id="cart-count">0</span>)</span>
+      </div>
+      <button id="btn-cart-close" class="drawer-close" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Fermer
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div id="cart-empty" class="cart-empty-msg">Votre panier est actuellement vide.</div>
+    <div class="cart-footer" id="cart-footer-section" style="display:none;">
+      <div class="cart-subtotal">
+        <span>Sous-total</span>
+        <span id="cart-subtotal-amount">0,00 DH</span>
+      </div>
+      <div class="cart-shipping-note">Livraison gratuite sur tout le Maroc.</div>
+      <button id="btn-checkout" class="btn-checkout">Passer la commande</button>
+      <a href="#" id="cart-continue-shopping" class="cart-continue">Continuer vos achats</a>
+    </div>
+  </aside>
+
+  <!-- ====== SEARCH MODAL ====== -->
+  <div id="search-modal" class="search-modal">
+    <div class="search-modal-inner">
+      <div class="search-input-wrap">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search-input" placeholder="Rechercher des produits..." autocomplete="off">
+        <button id="search-close" style="font-size:0.85rem;opacity:0.6;">ÉCHAP</button>
+      </div>
+      <div id="search-results" class="search-results"></div>
+      <div class="search-close-hint">Appuyez sur ÉCHAP ou cliquez à l'extérieur pour fermer</div>
+    </div>
+  </div>
+
+  <!-- ====== PRODUCT MODAL ====== -->
+  <div id="product-modal" class="product-modal">
+    <button id="modal-close" class="modal-close-btn" aria-label="Close">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="product-modal-content">
+      <div class="modal-image">
+        <img id="modal-product-image" src="" alt="">
+      </div>
+      <div class="modal-details">
+        <h2 id="modal-product-name"></h2>
+        <div class="modal-price" id="modal-product-price"></div>
+        <p class="modal-desc" id="modal-product-desc"></p>
+        <button id="modal-add-btn" class="modal-add-btn" data-id="">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <button id="btn-menu" class="header-btn btn-menu-toggle" aria-label="Open menu">
+          <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="header-center">
+        <a href="/" class="logo-link">
+          <img class="logo-img" src="/images/logo.png" alt="ORIVIZ">
+        </a>
+      </div>
+
+      <div class="header-right">
+        <button id="btn-search" class="header-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button id="btn-cart" class="header-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span id="header-cart-count" class="cart-count" style="display:none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main class="product-page-main">
+    <div class="product-detail-container">
+      <!-- Left: Product Gallery -->
+      <div class="product-gallery">
+        <div class="product-image-wrapper">
+          <img id="product-img" src="" alt="">
+        </div>
+      </div>
+      
+      <!-- Right: Product Info -->
+      <div class="product-info-panel">
+        <a href="/" class="back-to-shop">&larr; Retour à la collection</a>
+        
+        <h1 id="product-name">Chargement...</h1>
+        <div class="product-price" id="product-price"></div>
+        
+        <div class="product-description-box">
+          <p id="product-desc"></p>
+        </div>
+        
+        <div class="product-specs">
+          <div class="spec-row">
+            <span class="spec-label">Taille (Verres - Pont - Branches)</span>
+            <span class="spec-value" id="product-size"></span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Matériau</span>
+            <span class="spec-value">Acétate de Cellulose Mazzucchelli 1849</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Verres</span>
+            <span class="spec-value">Protection UV maximale (Cat. 3)</span>
+        </div>
+
+        <!-- Actions Container (Quantity + Add to Cart + Buy Now) -->
+        <div class="product-actions-container">
+          <div class="product-actions-row">
+            <div class="quantity-selector-container">
+              <span class="quantity-label">Quantité</span>
+              <div class="quantity-selector">
+                <button id="qty-minus" class="quantity-btn" type="button">−</button>
+                <input type="number" id="qty-input" class="quantity-input" value="1" min="1" max="99" readonly>
+                <button id="qty-plus" class="quantity-btn" type="button">+</button>
+              </div>
+            </div>
+            <button class="add-to-cart-btn" id="add-to-cart-btn">Ajouter au panier</button>
+          </div>
+          <button class="buy-now-btn" id="buy-now-btn">Acheter maintenant</button>
+        </div>
+        
+        <!-- Accordion info -->
+        <div class="product-accordions">
+          <div class="prod-accordion-item">
+            <button class="prod-accordion-trigger">
+              <span>Livraison & Retours</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="prod-accordion-content">
+              <p>Livraison gratuite au Maroc sous 24h à 72h. Retours et échanges gratuits sous 14 jours.</p>
+            </div>
+          </div>
+          <div class="prod-accordion-item">
+            <button class="prod-accordion-trigger">
+              <span>Détails de Fabrication</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="prod-accordion-content">
+              <p>Nos montures sont fabriquées à la main avec de l'acétate de cellulose de haute qualité, équipé de wirecore malléable de qualité supérieure pour un ajustement parfait et durable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Boutique</h3>
+        <a href="/#frames">Montures Optiques</a>
+        <a href="/contact">Contactez-nous</a>
+      </div>
+      <div class="footer-col">
+        <h3>Informations</h3>
+        <a href="/contact">Échanges &amp; Retours</a>
+        <a href="/contact">FAQ</a>
+        <a href="/contact">Politique de confidentialité</a>
+      </div>
+      <div class="footer-col">
+        <h3>Suivez-nous</h3>
+        <div class="footer-social-row" style="display: flex; gap: 16px; margin-top: 12px; align-items: center;">
+          <a href="https://www.instagram.com/oriviz.eyewear/" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.facebook.com/oriviz.eyewear" target="_blank" rel="noopener" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.tiktok.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="TikTok" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .8.11V9.4a6.27 6.27 0 0 0-3.11-.12A6.35 6.35 0 0 0 2 15.63a6.35 6.35 0 0 0 9.21 5.56 6.3 6.3 0 0 0 3.32-5.46V8.66A8.3 8.3 0 0 0 19.59 12V6.69z"/></svg></a>
+          <a href="https://www.youtube.com/@oriviz.eyewear" target="_blank" rel="noopener" aria-label="YouTube" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.pinterest.com/oriviz/" target="_blank" rel="noopener" aria-label="Pinterest" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.27 1.029-.999 2.321-1.49 3.116C9.937 23.77 10.942 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+          <a href="https://www.linkedin.com/company/oriviz/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; opacity: 0.6; transition: opacity 0.2s; color: inherit;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026, ORIVIZ</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/config.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+    (function() {
+      'use strict';
+
+      // --- Get Product ID from Path ---
+      const pathParts = window.location.pathname.split('/');
+      const productId = pathParts[pathParts.length - 1];
+
+      // --- Find Product ---
+      const product = CONFIG.products.find(p => p.id === productId);
+
+      if (!product) {
+        document.getElementById('product-name').textContent = "Produit non trouvé";
+        document.querySelector('.product-detail-container').innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 100px 0;">
+            <h2>Désolé, ce produit n'existe pas.</h2>
+            <a href="/" class="add-to-cart-btn" style="display: inline-block; width: auto; margin-top: 24px; padding: 14px 40px;">Retour à la collection</a>
+          </div>
+        `;
+        return;
+      }
+
+      // --- Render Product Details ---
+      document.title = `${product.name} — ORIVIZ`;
+      document.getElementById('product-img').src = product.image.startsWith('/') ? product.image : '/' + product.image;
+      document.getElementById('product-img').alt = product.alt || product.name;
+      document.getElementById('product-name').textContent = product.name;
+      document.getElementById('product-price').textContent = `${product.price.toLocaleString('fr-FR')} DH`;
+      document.getElementById('product-desc').textContent = product.description;
+      document.getElementById('product-size').textContent = `(${product.size})`;
+
+      // --- Quantity Selector Logic ---
+      const qtyInput = document.getElementById('qty-input');
+      const qtyMinusBtn = document.getElementById('qty-minus');
+      const qtyPlusBtn = document.getElementById('qty-plus');
+      if (qtyInput && qtyMinusBtn && qtyPlusBtn) {
+        qtyMinusBtn.addEventListener('click', function() {
+          let val = parseInt(qtyInput.value, 10) || 1;
+          if (val > 1) {
+            qtyInput.value = val - 1;
+          }
+        });
+        qtyPlusBtn.addEventListener('click', function() {
+          let val = parseInt(qtyInput.value, 10) || 1;
+          if (val < 99) {
+            qtyInput.value = val + 1;
+          }
+        });
+      }
+
+      // --- Add to Cart Event ---
+      document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+        const qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
+        if (typeof window.__addToCart === 'function') {
+          window.__addToCart(product.id, qty);
+        } else {
+          // Fallback if app.js is not loaded
+          const existing = JSON.parse(localStorage.getItem('oriviz_cart') || '[]');
+          const item = existing.find(c => c.id === product.id);
+          if (item) {
+            item.qty += qty;
+          } else {
+            existing.push({
+              id: product.id,
+              name: product.name,
+              price: product.price,
+              image: product.image,
+              qty: qty
+            });
+          }
+          localStorage.setItem('oriviz_cart', JSON.stringify(existing));
+        }
+      });
+
+      // --- Buy Now Event ---
+      const buyNowBtn = document.getElementById('buy-now-btn');
+      if (buyNowBtn) {
+        buyNowBtn.addEventListener('click', function() {
+          const qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
+          if (typeof window.__addToCart === 'function') {
+            window.__addToCart(product.id, qty);
+          } else {
+            const existing = JSON.parse(localStorage.getItem('oriviz_cart') || '[]');
+            const item = existing.find(c => c.id === product.id);
+            if (item) {
+              item.qty += qty;
+            } else {
+              existing.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                qty: qty
+              });
+            }
+            localStorage.setItem('oriviz_cart', JSON.stringify(existing));
+          }
+          window.location.href = '/checkout.html';
+        });
+      }
+
+      // --- Accordion Toggle ---
+      const accordions = document.querySelectorAll('.prod-accordion-item');
+      accordions.forEach(item => {
+        const trigger = item.querySelector('.prod-accordion-trigger');
+        trigger.addEventListener('click', function() {
+          const isOpen = item.classList.contains('open');
+          
+          // Close all
+          accordions.forEach(a => a.classList.remove('open'));
+          
+          if (!isOpen) {
+            item.classList.add('open');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

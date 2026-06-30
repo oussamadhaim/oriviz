@@ -1,0 +1,1047 @@
+[
+  {
+    "id": "shopify-section-sections--27509844410713__header",
+    "tag": "div",
+    "class": "shopify-section shopify-section-group-header-group section-header relative z-20",
+    "texts": [
+      "Search",
+      "Submit",
+      "Close",
+      "0 items",
+      "Menu"
+    ],
+    "images": [
+      {
+        "src": "//lohause.com/cdn/shop/files/Sem_titulo_70.png?v=1715194840&width=130",
+        "alt": "lohause"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Sem_titulo_70.png?v=1715194840&width=130",
+        "alt": "lohause"
+      }
+    ],
+    "links": []
+  },
+  {
+    "id": "shopify-section-menu-drawer",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "Close",
+      "Home",
+      "Frames",
+      "Sunglasses",
+      "Not for Everyone",
+      "La Vie",
+      "Prescription Lenses",
+      "Retail Partnerships",
+      "Contact us",
+      "+ Info",
+      "Raw Materials",
+      "Exchanges & Returns",
+      "Payments",
+      "Shipping Information",
+      "FAQs",
+      "About us",
+      "Beyond the Glasses",
+      "Facebook",
+      "Instagram",
+      "Email",
+      "Menu"
+    ],
+    "images": [],
+    "links": [
+      {
+        "href": "/",
+        "text": "Home"
+      },
+      {
+        "href": "/collections/our-frames",
+        "text": "Frames"
+      },
+      {
+        "href": "/collections/sunglasses",
+        "text": "Sunglasses"
+      },
+      {
+        "href": "/collections/not-for-everyone",
+        "text": "Not for Everyone"
+      },
+      {
+        "href": "/collections/la-vie",
+        "text": "La Vie"
+      },
+      {
+        "href": "/pages/prescription-lenses",
+        "text": "Prescription Lenses"
+      },
+      {
+        "href": "/pages/wholesalepartnerships",
+        "text": "Retail Partnerships"
+      },
+      {
+        "href": "/pages/contact-us",
+        "text": "Contact us"
+      },
+      {
+        "href": "/pages/raw-materials",
+        "text": "Raw Materials"
+      },
+      {
+        "href": "/pages/exchanges-returns",
+        "text": "Exchanges & Returns"
+      },
+      {
+        "href": "/pages/payments",
+        "text": "Payments"
+      },
+      {
+        "href": "/pages/shipping",
+        "text": "Shipping Information"
+      },
+      {
+        "href": "/pages/faqs",
+        "text": "FAQs"
+      },
+      {
+        "href": "https://lohause.com/pages/about-us",
+        "text": "About us"
+      },
+      {
+        "href": "/blogs/beyond-the-glasses",
+        "text": "Beyond the Glasses"
+      },
+      {
+        "href": "/",
+        "text": "Home"
+      },
+      {
+        "href": "/collections/our-frames",
+        "text": "Frames"
+      },
+      {
+        "href": "/collections/sunglasses",
+        "text": "Sunglasses"
+      },
+      {
+        "href": "/collections/not-for-everyone",
+        "text": "Not for Everyone"
+      },
+      {
+        "href": "/collections/la-vie",
+        "text": "La Vie"
+      },
+      {
+        "href": "/pages/prescription-lenses",
+        "text": "Prescription Lenses"
+      },
+      {
+        "href": "/pages/wholesalepartnerships",
+        "text": "Retail Partnerships"
+      },
+      {
+        "href": "/pages/contact-us",
+        "text": "Contact us"
+      },
+      {
+        "href": "/pages/raw-materials",
+        "text": "Raw Materials"
+      },
+      {
+        "href": "/pages/exchanges-returns",
+        "text": "Exchanges & Returns"
+      },
+      {
+        "href": "/pages/payments",
+        "text": "Payments"
+      },
+      {
+        "href": "/pages/shipping",
+        "text": "Shipping Information"
+      },
+      {
+        "href": "/pages/faqs",
+        "text": "FAQs"
+      },
+      {
+        "href": "https://lohause.com/pages/about-us",
+        "text": "About us"
+      },
+      {
+        "href": "/blogs/beyond-the-glasses",
+        "text": "Beyond the Glasses"
+      }
+    ]
+  },
+  {
+    "id": "shopify-section-template--27509843525977__scrolling_text_KyYnNC",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "FREE DELIVERY WORLDWIDE"
+    ],
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__image_with_text_overlay_8JCiEg",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [],
+    "images": [
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-11-11T160624.283.png?v=1762877205&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2024-12-16T185337.786.png?v=1762876089&width=3000",
+        "alt": ""
+      }
+    ],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__scrolling_text_adtBrG",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "FREE DELIVERY WORLDWIDE"
+    ],
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__featured-collection",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "Prescription Glasses",
+      "The Winston Tortoise",
+      "€175,00",
+      "The Winston Amber",
+      "The Winston Air",
+      "The Winston Paradox N1",
+      "€195,00",
+      "The Dean Tortoise",
+      "The Dean Amber",
+      "The Dean Paradox N7",
+      "The Dean Paradox N1",
+      "The Truman Tortoise",
+      "The Truman Air",
+      "The Truman Noir",
+      "The Truman Amber",
+      "The Allen Noir",
+      "The Allen Yellow",
+      "The Allen Paradox N4",
+      "The Allen Paradox N1",
+      "View all"
+    ],
+    "images": [
+      {
+        "src": "//lohause.com/cdn/shop/products/the-winston-tortoise-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-367053.jpg?v=1754912510&width=3000",
+        "alt": "The Winston Tortoise lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Winston-Tortoise-Banana3_59c86437-1f16-4dc1-8f9d-1d869b02440f.jpg?v=1760135307&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-11-12T220130.060.png?v=1762984916&width=3000",
+        "alt": "The Winston Amber"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Winston-Amber-M3_7d8bfdbc-1859-4c3a-87c2-5b719d297069.jpg?v=1762984916&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/the-winston-air-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-772849.jpg?v=1754912436&width=3000",
+        "alt": "The Winston Air lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/winston-air-W-3_4cc0a049-3ed7-40ce-939c-d56900a3c728.jpg?v=1760134929&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/winston-paradox-n1-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-533178.jpg?v=1754912403&width=3000",
+        "alt": "Winston Paradox N1 lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/winston-paradox-n1-2_dc6a311c-3295-4664-b47e-e57cfec72980.jpg?v=1763079543&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/the-depp-tortoise-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-789615.jpg?v=1754912480&width=3000",
+        "alt": "The Depp Tortoise lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/dean-tortoise-5_7355e757-4003-4529-9cd0-da2fbb13687b.jpg?v=1760135051&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/the-depp-yellow-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-517465.jpg?v=1754912494&width=3000",
+        "alt": "The Depp Yellow lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/dean-yellow-2_02eacad8-0247-4672-9a73-adb656082dd2.jpg?v=1760135080&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/dean-paradox-n7.jpg?v=1776426525&width=3000",
+        "alt": "The Dean Paradox N7"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/DeppParadoxN7_aa51a17f-4a31-40df-9220-8b72d7779f4b.jpg?v=1776426525&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/the-depp-paradox-n1-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-501952.jpg?v=1754912383&width=3000",
+        "alt": "The Depp Paradox N1 lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/dean-paradox-n1-1_7f62fb0c-6aa0-4c04-9f85-980ed03aa409.jpg?v=1760134811&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/lohause-trueman-side-eyeglasses-frame-tortoise.jpg?v=1779191873&width=3000",
+        "alt": "The Truman Tortoise"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/DSC02278-2.jpg?v=1779192187&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/lohause-trueman-side-eyeglasses-frame-air.jpg?v=1779191873&width=3000",
+        "alt": "The Truman Air"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/DSC01724-2.jpg?v=1779192302&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-11-12T222221.533.png?v=1762986171&width=3000",
+        "alt": "The Truman Noir"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/NewmanNoir-M3_acc54fff-dc4d-4286-bfc2-3cee347466cf.jpg?v=1762986171&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-11-12T222118.175.png?v=1762986118&width=3000",
+        "alt": "The Truman Amber"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Newman-Amber_2d785250-e5e8-4be9-83cb-ff1031488f7a.jpg?v=1762986118&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/the-allen-black-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-348893.jpg?v=1754912487&width=3000",
+        "alt": "The Allen Black lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/allen-black-1_98b06938-2906-493f-a62e-84b798297f8b.jpg?v=1760135068&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/the-allen-yellow-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-653536.jpg?v=1754912472&width=3000",
+        "alt": "The Allen Yellow lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/AllenYellow_Paradox2_8af02692-c766-4b1f-8a00-e8087d7c7b09.jpg?v=1760135033&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled-2025-11-12T224233.605.png?v=1762987373&width=3000",
+        "alt": "The Allen Paradox N4"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/AllenParadoxN4-W_fc240a12-1ac9-42cb-b7e3-9ad3a7d79d59.jpg?v=1762987373&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-11-12T221024.419.png?v=1771941941&width=3000",
+        "alt": "The Allen Paradox N1"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/AllenParadoxN1-2_39bc5416-bc89-4952-bfdc-fc496c8185fe.jpg?v=1771941941&width=3000",
+        "alt": ""
+      }
+    ],
+    "links": [
+      {
+        "href": "/collections/our-frames",
+        "text": "View all"
+      }
+    ]
+  },
+  {
+    "id": "shopify-section-template--27509843525977__scrolling_text_nFf4Xt",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "FREE DELIVERY WORLDWIDE"
+    ],
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__image_with_text_overlay_7n6EdB",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [],
+    "images": [
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-10-15T173456.201.png?v=1762999292&width=3000",
+        "alt": ""
+      }
+    ],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__image_with_text_overlay_rVTdmQ",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [],
+    "images": [
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_42.png?v=1730483601&width=3000",
+        "alt": ""
+      }
+    ],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__collapsible_rows_GrMjY8",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "Raw Materials",
+      "Mazzucchelli 1849 Acetate",
+      "Italian cellulose acetate produced with controlled polymer chains for superior density, colour stability, and long-term structural integrity.",
+      "Premium Malleable Wirecore",
+      "High-grade metal core with calibrated flexibility, engineered to maintain arm geometry and ensure consistent alignment under repeated stress.",
+      "Ultra-Precision Screws",
+      "Micro-machined stainless-steel screws with tight tolerance threads designed to minimise play, resist loosening, and enhance hinge durability.",
+      "Prescription Lenses",
+      "Prescription Lenses by ZEISS®",
+      "All our prescription lenses are crafted exclusively with ZEISS, the world leader in optical precision. We offer single-vision, progressive, reading lenses and blue-light blocking options.",
+      "To order your prescription glasses, simply choose your frame, click",
+      "Select Lenses & Purchase",
+      ", and upload or manually enter your prescription at checkout.",
+      "Our team verifies every order for accuracy, ensuring your ZEISS lenses are made to the highest standard before being shipped directly to you."
+    ],
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__scrolling_text_iNJxRi",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "FREE DELIVERY WORLDWIDE"
+    ],
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__featured_collection_VGmFPL",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "Our Sunglasses",
+      "The Dean Tortoise Sunglasses",
+      "€195,00",
+      "The Dean Amber Sunglasses",
+      "The Dean Paradox N1 Sunglasses",
+      "€220,00",
+      "The Dean Paradox N3 Sunglasses",
+      "The Winston Tortoise Sunglasses",
+      "The Winston Amber Sunglasses",
+      "The Winston Paradox N1 Sunglasses",
+      "The Winston Paradox N3 Sunglasses",
+      "The Truman Tortoise Sunglasses",
+      "The Truman Air Sunglasses",
+      "The Hoffman Noir Sunglasses",
+      "The Picasso Amber Sunglasses",
+      "View all"
+    ],
+    "images": [
+      {
+        "src": "//lohause.com/cdn/shop/products/depp-tortoise-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-843914.jpg?v=1754912255&width=3000",
+        "alt": "Depp Tortoise lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/dean-tortoise-sunglasses-W-1_16932776-2cb5-4867-a7d6-14ee1fb476c2.jpg?v=1760124030&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/depp-yellow-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-372203.jpg?v=1754912250&width=3000",
+        "alt": "Depp Yellow lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/dean-yellow-sunglasses-5_e9f83aba-b134-48a2-84c2-b371e7f2581a.jpg?v=1760124012&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/the-depp-paradox-n1-sunglasses-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-475068.jpg?v=1754912364&width=3000",
+        "alt": "The Depp Paradox N1 Sunglasses lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/dean-paradox-n1-sunglasses_dean_air_sunglasses_27ca8937-2aab-4273-8bcd-a3bea8edb0b7.jpg?v=1760134756&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/the-depp-paradox-n3-sunglasses-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-102507.jpg?v=1754912354&width=3000",
+        "alt": "The Depp Paradox N3 Sunglasses lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/dean-paradox-n3-sunglasses2_be77a3cd-dfb2-40e0-a8a4-dae7c19ac72e.jpg?v=1763080223&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/the-winston-tortoise-sunglasses-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-226520.jpg?v=1754912424&width=3000",
+        "alt": "The Winston Tortoise Sunglasses lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/winston-tortoise-sunglasses-2_b9e74488-42c9-40e3-bb89-955e697dcd24.jpg?v=1760134896&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-11-24T150548.210.png?v=1763996879&width=3000",
+        "alt": "The Winston Amber Sunglasses"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Winston-Amber-Sunglasses-Para_63a8537f-234b-4391-a6ab-7d3a08b7dc9d.jpg?v=1763996879&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/products/the-winston-paradox-n1-sunglasses-lohause-portuguese-eyewear-brand-original-frames-and-spectacles-481511.jpg?v=1754912393&width=3000",
+        "alt": "The Winston Paradox N1 Sunglasses lohause eyewear crafted from italian acetate."
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/winston-paradox-n1-sunglasses-W1_winston-air-sunglasses_658fe605-abc7-4c33-a2f0-a7f5a6e51114.jpg?v=1760134835&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-11-24T150604.163.png?v=1763996913&width=3000",
+        "alt": "The Winston Paradox N3 Sunglasses"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Winston-Paradox-Sunglasses-M2_0562df5e-fce1-4e6b-bde0-ede9e7426f23.jpg?v=1763996913&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/lohause-trueman-side-sunglasses-frame-tortoise.jpg?v=1779191799&width=3000",
+        "alt": "The Truman Tortoise Sunglasses"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/DSC04142-2.jpg?v=1779192479&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/lohause-trueman-side-sunglasses-frame-air.jpg?v=1779191800&width=3000",
+        "alt": "The Truman Air Sunglasses"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/DSC04003-2.jpg?v=1779192611&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-11-24T150651.564.png?v=1763997705&width=3000",
+        "alt": "The Hoffman Noir Sunglasses"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/LOHAUSE_e-commerce_web-172_f121988a-20d5-4efb-a429-84d42e98585d.jpg?v=1763997705&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/ChatGPT_Image_7_05_2026_18_06_32.png?v=1778173624&width=3000",
+        "alt": "The Picasso Amber Sunglasses"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/PicassoAmberSunglases_10121425-8b89-4ab9-97dd-2f602b5131ec.jpg?v=1776777692&width=3000",
+        "alt": ""
+      }
+    ],
+    "links": [
+      {
+        "href": "/collections/sunglasses",
+        "text": "View all"
+      }
+    ]
+  },
+  {
+    "id": "shopify-section-template--27509843525977__image_with_text_overlay_7xWgrj",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [],
+    "images": [
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-11-14T000641.058.png?v=1763078816&width=3000",
+        "alt": ""
+      }
+    ],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__scrolling_text_nkNTjF",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "FREE DELIVERY WORLDWIDE"
+    ],
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__featured_collection_ATraRp",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "Not For Everyone",
+      "The Winston Carmine",
+      "€195,00",
+      "The Winston Montpelier",
+      "The Winston Amberfort",
+      "The Winston Majorelle",
+      "The Spike Carmine",
+      "The Spike Montpelier",
+      "The Spike Amberfort",
+      "The Spike Majorelle",
+      "View all"
+    ],
+    "images": [
+      {
+        "src": "//lohause.com/cdn/shop/files/winston-carmine.jpg?v=1762992348&width=3000",
+        "alt": "The Winston Carmine"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/LOHAUSE0937-Edit_1e28770e-aa2e-4a02-a48b-177ccb7494ef.jpg?v=1762992348&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/winston-montpelier.jpg?v=1762992400&width=3000",
+        "alt": "The Winston Montpelier"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/LOHAUSE1031-Edit_11de4b3f-d56b-43ab-ad21-4ab0404a8d0c.jpg?v=1762992400&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/winston-amberfort.jpg?v=1762992458&width=3000",
+        "alt": "The Winston Amberfort"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/LOHAUSE1103-2-Edit_621eb2e1-688b-483f-a2ef-a24b35ac0b90.jpg?v=1762992458&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/winston-majorelle.jpg?v=1762992307&width=3000",
+        "alt": "The Winston Majorelle"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/LOHAUSE1081-Edit_16461891-0421-4c46-ac0f-d9e72ceea75f.jpg?v=1762992307&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/spike-carmine.jpg?v=1762992575&width=3000",
+        "alt": "The Spike Carmine"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/LOHAUSE2050-Edit_484ff86b-407a-4001-8f91-6ddeb80cf04a.jpg?v=1762992575&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/spike-montpelier.jpg?v=1762992627&width=3000",
+        "alt": "The Spike Montpelier"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/LOHAUSE2112-Edit_ff9317e5-45f7-44e8-ad5c-b42a54c1babd.jpg?v=1762992627&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/spike-amberfort.jpg?v=1762992667&width=3000",
+        "alt": "The Spike Amberfort"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/LOHAUSE2087-Edit_f7bfacba-5d5b-4dda-8e21-f5599b034c72.jpg?v=1762992667&width=3000",
+        "alt": ""
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/spike-majorelle.jpg?v=1762992487&width=3000",
+        "alt": "The Spike Majorelle"
+      },
+      {
+        "src": "//lohause.com/cdn/shop/files/LOHAUSE1521-Edit_ec66471a-2f4e-4b94-9422-4edb5f6267b4.jpg?v=1762992487&width=3000",
+        "alt": ""
+      }
+    ],
+    "links": [
+      {
+        "href": "/collections/not-for-everyone",
+        "text": "View all"
+      }
+    ]
+  },
+  {
+    "id": "shopify-section-template--27509843525977__image_with_text_overlay_3J3Cjj",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [],
+    "images": [
+      {
+        "src": "//lohause.com/cdn/shop/files/Untitled_-_2025-11-13T023241.303.png?v=1763001182&width=3000",
+        "alt": ""
+      }
+    ],
+    "links": []
+  },
+  {
+    "id": "shopify-section-template--27509843525977__newsletter_37TAE3",
+    "tag": "div",
+    "class": "shopify-section",
+    "texts": [
+      "Early access to new products. Exclusive offers and more to discover.",
+      "Email address",
+      "Subscribe"
+    ],
+    "images": [],
+    "links": []
+  },
+  {
+    "id": "shopify-section-sections--27509844377945__footer",
+    "tag": "div",
+    "class": "shopify-section shopify-section-group-footer-group",
+    "texts": [
+      "Frames",
+      "Sunglasses",
+      "Not For Everyone",
+      "La Vie",
+      "The Paradox",
+      "Contact Us",
+      "Raw Materials",
+      "Exchanges & Returns",
+      "FAQs",
+      "Beyond The Glasses",
+      "© 2026,",
+      "lohause",
+      "LOHAUSE®",
+      "Country/region",
+      "Portugal (EUR\n            €)",
+      "Afghanistan (AFN\n                      ؋)",
+      "Åland Islands (EUR\n                      €)",
+      "Albania (ALL\n                      L)",
+      "Andorra (EUR\n                      €)",
+      "Angola (EUR\n                      €)",
+      "Anguilla (XCD\n                      $)",
+      "Antigua & Barbuda (XCD\n                      $)",
+      "Argentina (EUR\n                      €)",
+      "Armenia (AMD\n                      դր.)",
+      "Aruba (AWG\n                      ƒ)",
+      "Ascension Island (SHP\n                      £)",
+      "Australia (AUD\n                      $)",
+      "Austria (EUR\n                      €)",
+      "Azerbaijan (AZN\n                      ₼)",
+      "Bahamas (BSD\n                      $)",
+      "Bahrain (EUR\n                      €)",
+      "Bangladesh (BDT\n                      ৳)",
+      "Barbados (BBD\n                      $)",
+      "Belarus (EUR\n                      €)",
+      "Belgium (EUR\n                      €)",
+      "Belize (BZD\n                      $)",
+      "Benin (XOF\n                      Fr)",
+      "Bermuda (USD\n                      $)",
+      "Bhutan (EUR\n                      €)",
+      "Bolivia (BOB\n                      Bs.)",
+      "Bosnia & Herzegovina (BAM\n                      КМ)",
+      "Botswana (BWP\n                      P)",
+      "Brazil (BRL\n                      R$)",
+      "British Indian Ocean Territory (USD\n                      $)",
+      "British Virgin Islands (USD\n                      $)",
+      "Brunei (BND\n                      $)",
+      "Bulgaria (EUR\n                      €)",
+      "Burkina Faso (XOF\n                      Fr)",
+      "Burundi (BIF\n                      Fr)",
+      "Cambodia (KHR\n                      ៛)",
+      "Cameroon (XAF\n                      CFA)",
+      "Canada (CAD\n                      $)",
+      "Cape Verde (CVE\n                      $)",
+      "Caribbean Netherlands (USD\n                      $)",
+      "Cayman Islands (KYD\n                      $)",
+      "Central African Republic (XAF\n                      CFA)",
+      "Chad (XAF\n                      CFA)",
+      "Chile (CLP\n                      $)",
+      "China (CNY\n                      ¥)",
+      "Christmas Island (AUD\n                      $)",
+      "Cocos (Keeling) Islands (AUD\n                      $)",
+      "Colombia (COP\n                      $)",
+      "Comoros (KMF\n                      Fr)",
+      "Congo - Brazzaville (XAF\n                      CFA)",
+      "Congo - Kinshasa (CDF\n                      Fr)",
+      "Cook Islands (NZD\n                      $)",
+      "Costa Rica (CRC\n                      ₡)",
+      "Côte d’Ivoire (XOF\n                      Fr)",
+      "Croatia (EUR\n                      €)",
+      "Curaçao (ANG\n                      ƒ)",
+      "Cyprus (EUR\n                      €)",
+      "Czechia (CZK\n                      Kč)",
+      "Denmark (DKK\n                      kr.)",
+      "Djibouti (DJF\n                      Fdj)",
+      "Dominica (XCD\n                      $)",
+      "Dominican Republic (DOP\n                      $)",
+      "Ecuador (USD\n                      $)",
+      "Egypt (EGP\n                      ج.م)",
+      "El Salvador (USD\n                      $)",
+      "Equatorial Guinea (XAF\n                      CFA)",
+      "Eritrea (EUR\n                      €)",
+      "Estonia (EUR\n                      €)",
+      "Eswatini (EUR\n                      €)",
+      "Ethiopia (ETB\n                      Br)",
+      "Falkland Islands (FKP\n                      £)",
+      "Faroe Islands (DKK\n                      kr.)",
+      "Fiji (FJD\n                      $)",
+      "Finland (EUR\n                      €)",
+      "France (EUR\n                      €)",
+      "French Guiana (EUR\n                      €)",
+      "French Polynesia (XPF\n                      Fr)",
+      "French Southern Territories (EUR\n                      €)",
+      "Gabon (XOF\n                      Fr)",
+      "Gambia (GMD\n                      D)",
+      "Georgia (EUR\n                      €)",
+      "Germany (EUR\n                      €)",
+      "Ghana (EUR\n                      €)",
+      "Gibraltar (GBP\n                      £)",
+      "Greece (EUR\n                      €)",
+      "Greenland (DKK\n                      kr.)",
+      "Grenada (XCD\n                      $)",
+      "Guadeloupe (EUR\n                      €)",
+      "Guatemala (GTQ\n                      Q)",
+      "Guernsey (GBP\n                      £)",
+      "Guinea (GNF\n                      Fr)",
+      "Guinea-Bissau (XOF\n                      Fr)",
+      "Guyana (GYD\n                      $)",
+      "Haiti (EUR\n                      €)",
+      "Honduras (HNL\n                      L)",
+      "Hong Kong SAR (HKD\n                      $)",
+      "Hungary (HUF\n                      Ft)",
+      "Iceland (ISK\n                      kr)",
+      "India (INR\n                      ₹)",
+      "Indonesia (IDR\n                      Rp)",
+      "Iraq (EUR\n                      €)",
+      "Ireland (EUR\n                      €)",
+      "Isle of Man (GBP\n                      £)",
+      "Israel (ILS\n                      ₪)",
+      "Italy (EUR\n                      €)",
+      "Jamaica (JMD\n                      $)",
+      "Japan (JPY\n                      ¥)",
+      "Jersey (EUR\n                      €)",
+      "Jordan (EUR\n                      €)",
+      "Kazakhstan (KZT\n                      ₸)",
+      "Kenya (KES\n                      KSh)",
+      "Kiribati (EUR\n                      €)",
+      "Kosovo (EUR\n                      €)",
+      "Kuwait (USD\n                      $)",
+      "Kyrgyzstan (KGS\n                      som)",
+      "Laos (LAK\n                      ₭)",
+      "Latvia (EUR\n                      €)",
+      "Lebanon (LBP\n                      ل.ل)",
+      "Lesotho (EUR\n                      €)",
+      "Liberia (EUR\n                      €)",
+      "Libya (EUR\n                      €)",
+      "Liechtenstein (CHF\n                      CHF)",
+      "Lithuania (EUR\n                      €)",
+      "Luxembourg (EUR\n                      €)",
+      "Macao SAR (MOP\n                      P)",
+      "Madagascar (EUR\n                      €)",
+      "Malawi (MWK\n                      MK)",
+      "Malaysia (MYR\n                      RM)",
+      "Maldives (MVR\n                      MVR)",
+      "Mali (XOF\n                      Fr)",
+      "Malta (EUR\n                      €)",
+      "Martinique (EUR\n                      €)",
+      "Mauritania (EUR\n                      €)",
+      "Mauritius (MUR\n                      ₨)",
+      "Mayotte (EUR\n                      €)",
+      "Mexico (MXN\n                      $)",
+      "Moldova (MDL\n                      L)",
+      "Monaco (EUR\n                      €)",
+      "Mongolia (MNT\n                      ₮)",
+      "Montenegro (EUR\n                      €)",
+      "Montserrat (XCD\n                      $)",
+      "Morocco (MAD\n                      د.م.)",
+      "Mozambique (EUR\n                      €)",
+      "Myanmar (Burma) (MMK\n                      K)",
+      "Namibia (EUR\n                      €)",
+      "Nauru (AUD\n                      $)",
+      "Nepal (NPR\n                      Rs.)",
+      "Netherlands (EUR\n                      €)",
+      "New Caledonia (XPF\n                      Fr)",
+      "New Zealand (NZD\n                      $)",
+      "Nicaragua (NIO\n                      C$)",
+      "Niger (XOF\n                      Fr)",
+      "Nigeria (NGN\n                      ₦)",
+      "Niue (NZD\n                      $)",
+      "Norfolk Island (AUD\n                      $)",
+      "North Macedonia (MKD\n                      ден)",
+      "Norway (NOK\n                      kr)",
+      "Oman (EUR\n                      €)",
+      "Pakistan (PKR\n                      ₨)",
+      "Palestinian Territories (ILS\n                      ₪)",
+      "Panama (USD\n                      $)",
+      "Papua New Guinea (PGK\n                      K)",
+      "Paraguay (PYG\n                      ₲)",
+      "Peru (PEN\n                      S/)",
+      "Philippines (PHP\n                      ₱)",
+      "Pitcairn Islands (NZD\n                      $)",
+      "Poland (PLN\n                      zł)",
+      "Portugal (EUR\n                      €)",
+      "Qatar (QAR\n                      ر.ق)",
+      "Réunion (EUR\n                      €)",
+      "Romania (RON\n                      Lei)",
+      "Russia (EUR\n                      €)",
+      "Rwanda (RWF\n                      FRw)",
+      "Samoa (WST\n                      T)",
+      "San Marino (EUR\n                      €)",
+      "São Tomé & Príncipe (STD\n                      Db)",
+      "Saudi Arabia (SAR\n                      ر.س)",
+      "Senegal (XOF\n                      Fr)",
+      "Serbia (RSD\n                      РСД)",
+      "Seychelles (EUR\n                      €)",
+      "Sierra Leone (SLL\n                      Le)",
+      "Singapore (SGD\n                      $)",
+      "Sint Maarten (ANG\n                      ƒ)",
+      "Slovakia (EUR\n                      €)",
+      "Slovenia (EUR\n                      €)",
+      "Solomon Islands (SBD\n                      $)",
+      "Somalia (EUR\n                      €)",
+      "South Africa (ZAR\n                      R)",
+      "South Georgia & South Sandwich Islands (GBP\n                      £)",
+      "South Korea (KRW\n                      ₩)",
+      "South Sudan (EUR\n                      €)",
+      "Spain (EUR\n                      €)",
+      "Sri Lanka (LKR\n                      ₨)",
+      "St. Barthélemy (EUR\n                      €)",
+      "St. Helena (SHP\n                      £)",
+      "St. Kitts & Nevis (XCD\n                      $)",
+      "St. Lucia (XCD\n                      $)",
+      "St. Martin (EUR\n                      €)",
+      "St. Pierre & Miquelon (EUR\n                      €)",
+      "St. Vincent & Grenadines (XCD\n                      $)",
+      "Sudan (EUR\n                      €)",
+      "Suriname (EUR\n                      €)",
+      "Svalbard & Jan Mayen (NOK\n                      kr)",
+      "Sweden (SEK\n                      kr)",
+      "Switzerland (CHF\n                      CHF)",
+      "Taiwan (TWD\n                      $)",
+      "Tajikistan (TJS\n                      ЅМ)",
+      "Tanzania (TZS\n                      Sh)",
+      "Thailand (THB\n                      ฿)",
+      "Timor-Leste (USD\n                      $)",
+      "Togo (XOF\n                      Fr)",
+      "Tokelau (NZD\n                      $)",
+      "Tonga (TOP\n                      T$)",
+      "Trinidad & Tobago (TTD\n                      $)",
+      "Tristan da Cunha (GBP\n                      £)",
+      "Tunisia (EUR\n                      €)",
+      "Türkiye (TRY\n                      ₺)",
+      "Turkmenistan (EUR\n                      €)",
+      "Turks & Caicos Islands (USD\n                      $)",
+      "Tuvalu (AUD\n                      $)",
+      "U.S. Outlying Islands (USD\n                      $)",
+      "Uganda (UGX\n                      USh)",
+      "Ukraine (UAH\n                      ₴)",
+      "United Arab Emirates (AED\n                      د.إ)",
+      "United Kingdom (GBP\n                      £)",
+      "United States (USD\n                      $)",
+      "Uruguay (UYU\n                      $U)",
+      "Uzbekistan (UZS\n                      so'm)",
+      "Vanuatu (VUV\n                      Vt)",
+      "Vatican City (EUR\n                      €)",
+      "Venezuela (USD\n                      $)",
+      "Vietnam (VND\n                      ₫)",
+      "Wallis & Futuna (XPF\n                      Fr)",
+      "Western Sahara (MAD\n                      د.م.)",
+      "Yemen (YER\n                      ﷼)",
+      "Zambia (EUR\n                      €)",
+      "Zimbabwe (USD\n                      $)"
+    ],
+    "images": [],
+    "links": [
+      {
+        "href": "/collections/our-frames",
+        "text": "Frames"
+      },
+      {
+        "href": "/collections/sunglasses",
+        "text": "Sunglasses"
+      },
+      {
+        "href": "/collections/not-for-everyone",
+        "text": "Not For Everyone"
+      },
+      {
+        "href": "/collections/la-vie",
+        "text": "La Vie"
+      },
+      {
+        "href": "/collections/the-paradox",
+        "text": "The Paradox"
+      },
+      {
+        "href": "/pages/contact-us",
+        "text": "Contact Us"
+      },
+      {
+        "href": "/pages/raw-materials",
+        "text": "Raw Materials"
+      },
+      {
+        "href": "/pages/exchanges-returns",
+        "text": "Exchanges & Returns"
+      },
+      {
+        "href": "/pages/faqs",
+        "text": "FAQs"
+      },
+      {
+        "href": "/pages/beyond-the-glasses-the-charismatic-leadership-of-winston-churchill",
+        "text": "Beyond The Glasses"
+      },
+      {
+        "href": "/",
+        "text": "lohause"
+      },
+      {
+        "href": "https://www.shopify.com?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore",
+        "text": "LOHAUSE®"
+      }
+    ]
+  },
+  {
+    "id": "shopify-section-sections--27509844443481__privacy-banner",
+    "tag": "div",
+    "class": "shopify-section shopify-section-group-overlay-group contents",
+    "texts": [
+      "Choosing a selection results in a full page refresh.",
+      "Press the space key then arrow keys to make a selection.",
+      "Choose options",
+      "Close",
+      "Your cart -",
+      "Your cart",
+      "Your cart is currently empty.",
+      "Continue shopping",
+      "Loading...",
+      "Subtotal",
+      "€0,00 EUR",
+      "Free shipping.",
+      "Update",
+      "Payment"
+    ],
+    "images": [],
+    "links": [
+      {
+        "href": "/",
+        "text": "Continue shopping"
+      }
+    ]
+  }
+]
