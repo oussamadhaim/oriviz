@@ -606,33 +606,51 @@
     }
 
     // ── Coupon Handler ──
-    document.getElementById('apply-coupon-btn').addEventListener('click', function() {
+    document.getElementById('apply-coupon-btn').addEventListener('click', async function() {
       const codeInput = document.getElementById('coupon-code');
       const msgEl = document.getElementById('coupon-message');
-      const code = codeInput.value.trim().toUpperCase();
+      const rawCode = codeInput.value.trim().toUpperCase();
 
-      if (!code) {
+      if (!rawCode) {
         msgEl.style.color = '#ff4444';
         msgEl.textContent = 'Veuillez saisir un code.';
         return;
       }
 
+      // Hash the input with SHA-256 before comparing (codes are never stored in plain text)
+      const encoder = new TextEncoder();
+      const data = encoder.encode(rawCode);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const inputHash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
       const coupons = CONFIG.coupons || [];
-      const found = coupons.find(c => c.code === code);
+      const found = coupons.find(c => c.hash === inputHash);
 
       if (found) {
         appliedCoupon = found;
         msgEl.style.color = '#4ade80';
-        msgEl.innerHTML = `Code <strong>${code}</strong> appliqué ! <a href="#" id="remove-coupon-link" style="color: #ff4444; margin-left: 8px; text-decoration: underline;">Retirer</a>`;
-        codeInput.value = '';
-        renderSummary();
 
-        document.getElementById('remove-coupon-link').addEventListener('click', function(e) {
+        // ✅ Sanitized: use textContent, never innerHTML with user input
+        msgEl.textContent = '';
+        const codeSpan = document.createElement('span');
+        codeSpan.textContent = `Code ${rawCode} appliqué ! `;
+        const removeLink = document.createElement('a');
+        removeLink.href = '#';
+        removeLink.id = 'remove-coupon-link';
+        removeLink.textContent = 'Retirer';
+        removeLink.style.cssText = 'color:#ff4444;margin-left:8px;text-decoration:underline;';
+        removeLink.addEventListener('click', function(e) {
           e.preventDefault();
           appliedCoupon = null;
           msgEl.textContent = '';
           renderSummary();
         });
+        msgEl.appendChild(codeSpan);
+        msgEl.appendChild(removeLink);
+
+        codeInput.value = '';
+        renderSummary();
       } else {
         msgEl.style.color = '#ff4444';
         msgEl.textContent = 'Code promo invalide.';

@@ -176,9 +176,11 @@ const CONFIG = {
     buttonText: 'S\'abonner',
   },
 
+  // ⚠️  Les codes sont stockés sous forme de hash SHA-256.
+  // Pour valider un code, le checkout compare le hash de la saisie utilisateur.
   coupons: [
-    { code: 'ORIVIZ10', type: 'percentage', value: 10 },
-    { code: 'WELCOME50', type: 'fixed', value: 50 },
+    { hash: 'c6aa39483dbf1e63ee597b3f01c70df120ed7d8b92ee1a37524c37b5eb328298', type: 'percentage', value: 10 },
+    { hash: '1841e32eb964404fa9dfef17aa0754f23a9dffa35ed2244c92ae5b2cb52ba161', type: 'fixed', value: 50 },
   ],
 
   googleSheetsWebhookUrl: '', // Collez ici l'URL de votre Web App Google Apps Script
