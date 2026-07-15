@@ -423,7 +423,7 @@
           </div>
           <div class="spec-row">
             <span class="spec-label">Matériau</span>
-            <span class="spec-value">Acétate de Cellulose Mazzucchelli 1849</span>
+            <span class="spec-value" id="product-material"></span>
           </div>
           <div class="spec-row">
             <span class="spec-label">Verres</span>
@@ -536,6 +536,7 @@
       document.getElementById('product-price').textContent = `${product.price.toLocaleString('fr-FR')} DH`;
       document.getElementById('product-desc').textContent = product.description;
       document.getElementById('product-size').textContent = `(${product.size})`;
+      document.getElementById('product-material').textContent = product.material || 'Acetate';
 
       // --- Quantity Selector Logic ---
       const qtyInput = document.getElementById('qty-input');

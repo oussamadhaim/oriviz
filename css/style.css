@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-link img {
-  height: 54px;
+  height: 44px;
   width: auto;
   transition: opacity var(--transition-fast);
 }
@@ -636,7 +636,7 @@ h1, h2, h3, h4, h5, h6 {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 80s linear infinite;
+  animation: marquee-scroll 250s linear infinite;
 }
 
 .marquee-track span {
@@ -710,7 +710,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 767px) {
   .hero-slider {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 2560 / 1350;
   }
 }
 
@@ -919,6 +919,31 @@ h1, h2, h3, h4, h5, h6 {
 .product-card:hover .product-card-image .img-hover {
   opacity: 1;
 }
+
+/* Out of stock */
+.product-card.out-of-stock {
+  cursor: default;
+}
+.product-card.out-of-stock .product-card-image {
+  opacity: 0.6;
+}
+.out-of-stock-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  white-space: nowrap;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 
 .product-card-info {
   padding: 1.25rem 1rem 1.5rem;
@@ -2104,19 +2129,11 @@ body.drawer-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 32px;
 }
 
-.virtual-tryon-content {
-  flex: 1 1 500px;
-  padding: 2.5rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-}
-
+/* ── Desktop layout ── */
+/* Titre : colonne gauche, avant l'image */
 .virtual-tryon-title {
   font-size: 3.8rem;
   font-family: 'Instrument Sans', sans-serif;
@@ -2126,11 +2143,38 @@ body.drawer-open {
   color: #ffffff;
   margin: 0;
   text-transform: none;
+  flex: 1 1 300px;
+  padding: 2.5rem 0;
+  order: 1;
 }
 
+/* Image : milieu */
+.virtual-tryon-image {
+  flex: 0 0 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 330px;
+  overflow: hidden;
+  position: relative;
+  order: 2;
+}
+
+.virtual-tryon-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+/* Bouton : colonne droite */
 .virtual-tryon-btn-wrapper {
   position: relative;
   display: inline-block;
+  flex: 1 1 200px;
+  display: flex;
+  justify-content: flex-end;
+  order: 3;
 }
 
 .virtual-tryon-btn {
@@ -2197,7 +2241,48 @@ body.drawer-open {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+/* ── Mobile : titre → image → bouton ── */
+@media (max-width: 991px) {
+  .virtual-tryon-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* 1. Titre */
+  .virtual-tryon-title {
+    font-size: 2.6rem;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    flex: unset;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0 1.25rem;
+    order: 1;
+  }
+
+  /* 2. Image */
+  .virtual-tryon-image {
+    flex: unset;
+    width: 100%;
+    height: 250px;
+    order: 2;
+  }
+  .virtual-tryon-image img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 0;
+  }
+
+  /* 3. Bouton */
+  .virtual-tryon-btn-wrapper {
+    flex: unset;
+    order: 3;
+    justify-content: center;
+    padding: 1.75rem 0 2rem;
+  }
+
   .virtual-tryon-tooltip {
     left: 50%;
     top: calc(100% + 12px);
@@ -2213,46 +2298,6 @@ body.drawer-open {
   }
 }
 
-.virtual-tryon-image {
-  flex: 0 0 500px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 330px;
-  overflow: hidden;
-  position: relative;
-}
-
-.virtual-tryon-image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  margin-bottom: 0;
-}
-
-@media (max-width: 991px) {
-  .virtual-tryon-content {
-    padding: 2rem 0;
-    align-items: center;
-    text-align: center;
-  }
-  .virtual-tryon-title {
-    font-size: 2.6rem;
-    line-height: 1.0;
-    letter-spacing: -0.03em;
-  }
-  .virtual-tryon-image {
-    flex: 1 1 100%;
-    height: 250px;
-  }
-  .virtual-tryon-image img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    margin-bottom: 0;
-  }
-}
-
 @media (max-width: 480px) {
   .virtual-tryon-title {
     font-size: 2.1rem;
@@ -2263,6 +2308,8 @@ body.drawer-open {
     font-size: 0.85rem;
   }
 }
+
+
 
 /* ============================================
    BRAND STORY SECTION
@@ -2378,9 +2425,15 @@ body.drawer-open {
   justify-content: center;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   z-index: 9999;
-  transition: transform 0.25s ease, background-color 0.25s ease;
+  transition: transform 0.25s ease, background-color 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
   cursor: pointer;
   text-decoration: none;
+}
+
+body.drawer-open #whatsapp-float {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 #whatsapp-float:hover {

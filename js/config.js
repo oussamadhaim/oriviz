@@ -73,79 +73,99 @@ const CONFIG = {
     {
       id: 'aqua-halo',
       name: 'Aqua Halo',
-      price: 1900,
+      price: 349,
       category: 'frames',
       image: '/images/Aqua Halo.jpeg',
       imageAlt: '/images/Aqua Halo.jpeg',
       alt: 'Lunettes Aqua Halo fabriquées à la main.',
       description: 'Des lunettes de soleil au design élégant et moderne, offrant une protection UV maximale et un style audacieux pour un look unique.',
-      size: '47-26-148'
+      size: '47-26-148',
+      material: 'Acetate,TR,Mixed Material'
     },
     {
       id: 'eclipse',
       name: 'Eclipse',
-      price: 2100,
+      price: 349,
       category: 'frames',
       image: '/images/Eclipse.jpeg',
       imageAlt: '/images/Eclipse.jpeg',
       alt: 'Lunettes Eclipse fabriquées à la main.',
       description: 'Des lunettes de soleil au design audacieux, offrant une protection UV parfaite et un style moderne qui attire tous les regards.',
-      size: '47-26-148'
+      size: '47-26-148',
+      material: 'Acetate,TR,Mixed Material'
     },
     {
       id: 'golden-hour',
       name: 'Golden Hour',
-      price: 2100,
+      price: 349,
       category: 'frames',
       image: '/images/Golden Hour.jpeg',
       imageAlt: '/images/Golden Hour.jpeg',
       alt: 'Lunettes Golden Hour fabriquées à la main.',
       description: 'Des lunettes de soleil élégantes et raffinées, inspirées par la lumière dorée du coucher de soleil, pour un style unique et intemporel.',
-      size: '48-24-145'
+      size: '48-24-145',
+      material: 'Acetate'
     },
     {
       id: 'midnight-muse',
       name: 'Midnight Muse',
-      price: 2200,
+      price: 349,
       category: 'frames',
       image: '/images/Midnight Muse.jpeg',
       imageAlt: '/images/Midnight Muse.jpeg',
       alt: 'Lunettes Midnight Muse fabriquées à la main.',
       description: 'Des lunettes de soleil élégantes et mystérieuses, parfaites pour un look raffiné et audacieux, même sous les lumières les plus intenses.',
-      size: '48-21-145'
+      size: '48-21-145',
+      material: 'Acetate'
     },
     {
       id: 'mirage',
       name: 'MIRAGE',
-      price: 2100,
+      price: 349,
       category: 'frames',
       image: '/images/MIRAGE.jpeg',
       imageAlt: '/images/MIRAGE.jpeg',
       alt: 'Lunettes MIRAGE fabriquées à la main.',
       description: 'Des lunettes de soleil élégantes et raffinées, conçues pour offrir un style unique et une protection optimale sous le soleil.',
-      size: '48-24-145'
+      size: '48-24-145',
+      material: 'Acetate'
     },
     {
       id: 'shady',
       name: 'Shady',
-      price: 2200,
+      price: 349,
       category: 'frames',
       image: '/images/Shady.PNG',
       imageAlt: '/images/Shady.PNG',
       alt: 'Lunettes Shady fabriquées à la main.',
       description: 'Des lunettes de soleil au design moderne et audacieux, parfaites pour un look tendance avec une protection solaire optimale.',
-      size: '48-23-145'
+      size: '48-23-145',
+      material: 'Acetate'
     },
     {
       id: 'strada',
       name: 'Strada',
-      price: 1900,
+      price: 430,
       category: 'frames',
       image: '/images/Strada.PNG',
       imageAlt: '/images/Strada.PNG',
       alt: 'Lunettes Strada fabriquées à la main.',
       description: 'Des lunettes de soleil au design audacieux et dynamique, parfaites pour un look moderne alliant style et performance.',
-      size: '48-24-145'
+      size: '48-24-145',
+      material: 'Acetate'
+    },
+    {
+      id: 'paradox',
+      name: 'Paradox',
+      price: 349,
+      category: 'frames',
+      image: '/images/Paradox.png',
+      imageAlt: '/images/Paradox.png',
+      alt: 'Lunettes Paradox fabriquées à la main.',
+      description: 'Des lunettes de soleil au design avant-gardiste, alliant élégance et audace pour un style hors du commun.',
+      size: '48-24-145',
+      outOfStock: true,
+      material: 'Acetate'
     }
   ],
 

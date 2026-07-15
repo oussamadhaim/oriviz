@@ -189,23 +189,25 @@
       container.innerHTML = CONFIG.products.map(p => {
         const imgPrimary = p.image.startsWith('/') ? p.image : '/' + p.image;
         const imgHover = p.imageAlt.startsWith('/') ? p.imageAlt : '/' + p.imageAlt;
+        const oos = p.outOfStock ? true : false;
         return `
-          <div class="product-card" data-product-id="${p.id}">
+          <div class="product-card${oos ? ' out-of-stock' : ''}" data-product-id="${p.id}" ${oos ? 'data-out-of-stock="true"' : ''}>
             <div class="product-card-image">
               <img class="img-primary" src="${imgPrimary}" alt="${p.alt}" loading="lazy">
               <img class="img-hover" src="${imgHover}" alt="${p.alt}" loading="lazy">
+              ${oos ? '<div class="out-of-stock-badge">Out of Stock</div>' : ''}
             </div>
             <div class="product-card-info">
               <div class="product-card-name">${p.name}</div>
-              <div class="product-card-price">${formatPrice(p.price)}</div>
+              <div class="product-card-price">${oos ? '<span style="opacity:0.5;font-style:italic;">Out of Stock</span>' : formatPrice(p.price)}</div>
             </div>
           </div>
         `;
       }).join('');
 
-      // Bind navigate to product detail
-      const cards = container.querySelectorAll('.product-card');
-      cards.forEach(card => {
+      // Bind navigate to product detail (skip out-of-stock)
+      container.querySelectorAll('.product-card').forEach(card => {
+        if (card.dataset.outOfStock === 'true') return;
         card.addEventListener('click', () => {
           window.location.href = `/products/${card.dataset.productId}`;
         });
