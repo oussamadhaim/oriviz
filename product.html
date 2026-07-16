@@ -12,9 +12,9 @@
   </script>
   <meta name="google-site-verification" content="adWeaHa-6d7JbkkgLvf3y-_S7iyGTeIRB60GRNZySuM" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lunettes ORIVIZ | Monture Artisanale en Acétate Italien</title>
-  <meta name="description" content="Découvrez nos montures ORIVIZ fabriquées à la main en acétate de cellulose Mazzucchelli. Livraison gratuite au Maroc. Qualité premium, design unique.">
-  <meta name="keywords" content="lunettes oriviz, monture acétate, lunettes artisanales maroc, lunettes de vue maroc, lunettes créateur, eyewear premium maroc">
+  <title id="page-title">Lunettes ORIVIZ — Monture Artisanale au Maroc | ORIVIZ</title>
+  <meta name="description" id="page-description" content="Découvrez nos lunettes ORIVIZ fabriquées à la main en acétate Mazzucchelli. Livraison gratuite au Maroc sous 72h. Paiement à la livraison. Design unique et qualité premium.">
+  <meta name="keywords" content="lunettes oriviz, monture acétate maroc, lunettes artisanales maroc, lunettes de vue maroc, acheter lunettes maroc, eyewear premium maroc, paiement livraison lunettes maroc">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://oriviz.com/products/">
@@ -590,7 +590,18 @@
       }
 
       // --- Render Product Details ---
-      document.title = `${product.name} — ORIVIZ`;
+      document.title = `${product.name} — Lunettes Artisanales au Maroc | ORIVIZ`;
+      // Update meta description dynamically
+      const metaDesc = document.getElementById('page-description');
+      if (metaDesc) {
+        metaDesc.setAttribute('content', `${product.name} par ORIVIZ — monture artisanale en acétate Mazzucchelli. Livraison gratuite au Maroc sous 72h. Paiement à la livraison.`);
+      }
+      // Update OG tags
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', `${product.name} — ORIVIZ`);
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', `${product.name} : monture artisanale ORIVIZ. Livraison gratuite au Maroc. Paiement à la livraison.`);
+
       document.getElementById('product-img').src = product.image.startsWith('/') ? product.image : '/' + product.image;
       document.getElementById('product-img').alt = product.alt || product.name;
       document.getElementById('product-name').textContent = product.name;
