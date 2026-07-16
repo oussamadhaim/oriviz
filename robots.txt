@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Pages statiques
+Allow: /shop
+Allow: /about
+Allow: /contact
+Allow: /faq
+Allow: /retours
+Allow: /privacy
+
+# Pages produits
+Allow: /products/
+
+# Bloquer les fichiers inutiles
+Disallow: /checkout
+Disallow: /cart
+Disallow: /js/
+Disallow: /css/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://oriviz.com/sitemap.xml

@@ -2,12 +2,23 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) — Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B187VV1RZ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B187VV1RZ8');
+  </script>
+  <meta name="google-site-verification" content="adWeaHa-6d7JbkkgLvf3y-_S7iyGTeIRB60GRNZySuM" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lunettes ORIVIZ | Monture Artisanale en Acétate Italien</title>
   <meta name="description" content="Découvrez nos montures ORIVIZ fabriquées à la main en acétate de cellulose Mazzucchelli. Livraison gratuite au Maroc. Qualité premium, design unique.">
   <meta name="keywords" content="lunettes oriviz, monture acétate, lunettes artisanales maroc, lunettes de vue maroc, lunettes créateur, eyewear premium maroc">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="product">
+  <meta property="og:url" content="https://oriviz.com/products/">
+  <meta property="og:image" content="https://oriviz.com/images/hero.webp">
   <meta property="og:locale" content="fr_MA">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -152,7 +163,7 @@
     .quantity-selector {
       display: flex;
       align-items: center;
-      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      border: 1.5px solid #ffffff;
       border-radius: 9999px;
       width: fit-content;
       height: 50px;
@@ -206,7 +217,7 @@
       letter-spacing: 0.12em;
       border-radius: 9999px;
       transition: all var(--transition-fast);
-      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      border: 1.5px solid #ffffff;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -295,7 +306,7 @@
   <!-- ====== MENU DRAWER ====== -->
   <aside class="menu-drawer" aria-label="Navigation menu">
     <div class="drawer-header">
-      <span style="font-size:0.85rem;">Menu</span>
+      
       <button id="btn-menu-close" class="drawer-close" aria-label="Close menu">
         <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         Fermer
@@ -346,7 +357,7 @@
         <button id="search-close" style="font-size:0.85rem;opacity:0.6;">ÉCHAP</button>
       </div>
       <div id="search-results" class="search-results"></div>
-      <div class="search-close-hint">Appuyez sur ÉCHAP ou cliquez à l'extérieur pour fermer</div>
+      <div class="search-close-hint">Cliquez à l'extérieur pour fermer</div>
     </div>
   </div>
 
@@ -409,7 +420,7 @@
       <div class="product-info-panel">
         <a href="/" class="back-to-shop">&larr; Retour à la collection</a>
         
-        <h1 id="product-name">Chargement...</h1>
+        <h1 id="product-name">Lunettes de Créateur ORIVIZ</h1>
         <div class="product-price" id="product-price"></div>
         
         <div class="product-description-box">
@@ -470,6 +481,56 @@
       </div>
     </div>
   </main>
+
+  <!-- ===== REASSURANCE BANNER ===== -->
+  <section class="reassurance-section">
+    <div class="reassurance-container">
+      <div class="reassurance-item">
+        <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="1" y="3" width="15" height="13" rx="2" ry="2" />
+          <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+          <circle cx="5.5" cy="18.5" r="2.5" />
+          <circle cx="18.5" cy="18.5" r="2.5" />
+        </svg>
+        <div class="reassurance-content">
+          <h4>Livraison Gratuite</h4>
+          <p>Partout au Maroc sous 24h à 72h</p>
+        </div>
+      </div>
+      
+      <div class="reassurance-item">
+        <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="6" width="20" height="12" rx="2" />
+          <circle cx="12" cy="12" r="2" />
+          <path d="M6 12h.01M18 12h.01" />
+        </svg>
+        <div class="reassurance-content">
+          <h4>Paiement Sécurisé</h4>
+          <p>Paiement à la livraison</p>
+        </div>
+      </div>
+      
+      <div class="reassurance-item">
+        <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+        </svg>
+        <div class="reassurance-content">
+          <h4>Retours &amp; Échanges</h4>
+          <p>Retours faciles et gratuits sous 14 jours</p>
+        </div>
+      </div>
+      
+      <div class="reassurance-item">
+        <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+        <div class="reassurance-content">
+          <h4>Garantie Qualité</h4>
+          <p>Acétate de créateur fait main</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ====== FOOTER ====== -->
   <footer class="site-footer">
@@ -537,6 +598,63 @@
       document.getElementById('product-desc').textContent = product.description;
       document.getElementById('product-size').textContent = `(${product.size})`;
       document.getElementById('product-material').textContent = product.material || 'Acetate';
+
+      // --- Inject Schema.org JSON-LD dynamically ---
+      let schemaScript = document.getElementById('product-schema');
+      if (!schemaScript) {
+        schemaScript = document.createElement('script');
+        schemaScript.id = 'product-schema';
+        schemaScript.type = 'application/ld+json';
+        document.head.appendChild(schemaScript);
+      }
+      const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": product.name,
+        "image": [
+          window.location.origin + (product.image.startsWith('/') ? product.image : '/' + product.image)
+        ],
+        "description": product.description,
+        "sku": product.id,
+        "brand": {
+          "@type": "Brand",
+          "name": "ORIVIZ"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": window.location.href,
+          "priceCurrency": "MAD",
+          "price": product.price,
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": product.outOfStock ? "https://schema.org/OutOfStock" : "https://schema.org/InStock"
+        }
+      };
+      schemaScript.textContent = JSON.stringify(schemaData);
+
+      // --- Handle Out of Stock state ---
+      if (product.outOfStock) {
+        const addToCartBtn = document.getElementById('add-to-cart-btn');
+        if (addToCartBtn) {
+          addToCartBtn.textContent = "Rupture de stock";
+          addToCartBtn.disabled = true;
+          addToCartBtn.style.opacity = "0.5";
+          addToCartBtn.style.cursor = "not-allowed";
+          addToCartBtn.style.pointerEvents = "none";
+        }
+        const buyNowBtn = document.getElementById('buy-now-btn');
+        if (buyNowBtn) {
+          buyNowBtn.textContent = "Indisponible";
+          buyNowBtn.disabled = true;
+          buyNowBtn.style.opacity = "0.5";
+          buyNowBtn.style.cursor = "not-allowed";
+          buyNowBtn.style.pointerEvents = "none";
+        }
+        const qtySelector = document.querySelector('.quantity-selector');
+        if (qtySelector) {
+          qtySelector.style.opacity = "0.5";
+          qtySelector.style.pointerEvents = "none";
+        }
+      }
 
       // --- Quantity Selector Logic ---
       const qtyInput = document.getElementById('qty-input');

@@ -706,11 +706,13 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
+  min-height: 420px;
 }
 
 @media (max-width: 767px) {
   .hero-slider {
-    aspect-ratio: 2560 / 1350;
+    aspect-ratio: 4 / 5;
+    min-height: 520px;
   }
 }
 
@@ -729,12 +731,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
 }
 
 .hero-content {
@@ -743,11 +746,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
-  padding: 24px;
+  padding: 48px 24px;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.45);
+  background: transparent;
 }
 
 .hero-title {
@@ -794,15 +797,20 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 767px) {
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
   }
   .hero-desc {
-    font-size: 1rem;
-    margin-bottom: 24px;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
   }
   .hero-cta-btn {
     padding: 12px 28px;
     font-size: 0.8rem;
+  }
+  .hero-content {
+    justify-content: flex-end;
+    padding-bottom: 40px;
   }
 }
 
@@ -890,6 +898,9 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
 .product-card-image {
@@ -2045,7 +2056,7 @@ body.drawer-open {
   max-width: 1200px;
   margin: 0 auto 2rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -2191,6 +2202,7 @@ body.drawer-open {
   gap: 12px;
   transition: transform 0.25s, background-color 0.25s;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  white-space: nowrap;
 }
 
 .virtual-tryon-btn:hover {
@@ -2304,8 +2316,8 @@ body.drawer-open {
     line-height: 1.0;
   }
   .virtual-tryon-btn {
-    padding: 12px 28px;
-    font-size: 0.85rem;
+    padding: 12px 20px;
+    font-size: 0.8rem;
   }
 }
 
@@ -2394,17 +2406,32 @@ body.drawer-open {
     padding: 3.5rem 24px;
   }
   .brand-story-container {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
-    gap: 32px;
+    gap: 20px;
   }
   .brand-story-content {
-    flex: 1 1 100%;
-    max-width: 100%;
+    display: contents;
   }
-  .brand-story-image-wrap {
-    flex: 1 1 100%;
+  .brand-story-container .ugc-title {
+    order: 1;
+    margin-bottom: 10px !important;
+  }
+  .brand-story-container .brand-story-text {
+    order: 2;
+    margin-bottom: 10px;
+  }
+  .brand-story-container .brand-story-image-wrap {
+    order: 3;
+    flex: unset;
     max-width: 280px;
+    margin-bottom: 10px;
+  }
+  .brand-story-container .brand-story-btn {
+    order: 4;
+    margin-top: 0 !important;
   }
 }
 
@@ -2455,5 +2482,100 @@ body.drawer-open #whatsapp-float {
   #whatsapp-float svg {
     width: 24px;
     height: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-height: 52px;
+  }
+  .header-inner {
+    padding: 0 0.75rem;
+    gap: 0;
+  }
+  .logo-link img {
+    height: 28px;
+  }
+  .header-btn {
+    padding: 0.3rem 0.4rem;
+  }
+  .header-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+  .header-left,
+  .header-right {
+    gap: 0.25rem;
+  }
+  .ugc-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* ============================================
+   REASSURANCE BANNER
+   ============================================ */
+.reassurance-section {
+  background-color: var(--color-bg);
+  border-top: var(--gridline-width) solid var(--border-color);
+  border-bottom: var(--gridline-width) solid var(--border-color);
+  padding: 3rem 24px;
+}
+
+.reassurance-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.reassurance-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.reassurance-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.reassurance-content h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 4px 0;
+  color: var(--color-text);
+}
+
+.reassurance-content p {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin: 0;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+@media (max-width: 991px) {
+  .reassurance-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .reassurance-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .reassurance-item {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 12px;
   }
 }

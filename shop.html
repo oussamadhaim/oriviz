@@ -2,6 +2,15 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) — Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B187VV1RZ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B187VV1RZ8');
+  </script>
+  <meta name="google-site-verification" content="adWeaHa-6d7JbkkgLvf3y-_S7iyGTeIRB60GRNZySuM" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boutique Lunettes | Montures Optiques &amp; Lunettes de Soleil — ORIVIZ</title>
   <meta name="description" content="Explorez toute la collection ORIVIZ : montures optiques et lunettes de soleil fabriquées à la main en acétate italien. Livraison gratuite au Maroc.">
@@ -10,6 +19,8 @@
   <meta property="og:title" content="Boutique ORIVIZ | Lunettes Premium au Maroc">
   <meta property="og:description" content="Montures optiques et lunettes de soleil artisanales. Livraison gratuite partout au Maroc.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oriviz.com/shop">
+  <meta property="og:image" content="https://oriviz.com/images/hero.webp">
   <meta property="og:locale" content="fr_MA">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -29,7 +40,7 @@
   <!-- ====== MENU DRAWER ====== -->
   <aside class="menu-drawer" aria-label="Navigation menu">
     <div class="drawer-header">
-      <span style="font-size:0.85rem;">Menu</span>
+      
       <button id="btn-menu-close" class="drawer-close" aria-label="Close menu">
         <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         Fermer
@@ -80,7 +91,7 @@
         <button id="search-close" style="font-size:0.85rem;opacity:0.6;">ÉCHAP</button>
       </div>
       <div id="search-results" class="search-results"></div>
-      <div class="search-close-hint">Appuyez sur ÉCHAP ou cliquez à l'extérieur pour fermer</div>
+      <div class="search-close-hint">Cliquez à l'extérieur pour fermer</div>
     </div>
   </div>
 
@@ -139,6 +150,56 @@
     </section>
   </main>
 
+  <!-- ===== REASSURANCE BANNER ===== -->
+  <section class="reassurance-section">
+    <div class="reassurance-container">
+      <div class="reassurance-item">
+        <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="1" y="3" width="15" height="13" rx="2" ry="2" />
+          <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+          <circle cx="5.5" cy="18.5" r="2.5" />
+          <circle cx="18.5" cy="18.5" r="2.5" />
+        </svg>
+        <div class="reassurance-content">
+          <h4>Livraison Gratuite</h4>
+          <p>Partout au Maroc sous 24h à 72h</p>
+        </div>
+      </div>
+      
+      <div class="reassurance-item">
+        <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="6" width="20" height="12" rx="2" />
+          <circle cx="12" cy="12" r="2" />
+          <path d="M6 12h.01M18 12h.01" />
+        </svg>
+        <div class="reassurance-content">
+          <h4>Paiement Sécurisé</h4>
+          <p>Paiement à la livraison</p>
+        </div>
+      </div>
+      
+      <div class="reassurance-item">
+        <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+        </svg>
+        <div class="reassurance-content">
+          <h4>Retours &amp; Échanges</h4>
+          <p>Retours faciles et gratuits sous 14 jours</p>
+        </div>
+      </div>
+      
+      <div class="reassurance-item">
+        <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+        <div class="reassurance-content">
+          <h4>Garantie Qualité</h4>
+          <p>Acétate de créateur fait main</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ====== FOOTER ====== -->
   <footer class="site-footer">
     <div class="footer-grid">
@@ -189,29 +250,21 @@
       container.innerHTML = CONFIG.products.map(p => {
         const imgPrimary = p.image.startsWith('/') ? p.image : '/' + p.image;
         const imgHover = p.imageAlt.startsWith('/') ? p.imageAlt : '/' + p.imageAlt;
-        const oos = p.outOfStock ? true : false;
         return `
-          <div class="product-card${oos ? ' out-of-stock' : ''}" data-product-id="${p.id}" ${oos ? 'data-out-of-stock="true"' : ''}>
+          <a href="/products/${p.id}" class="product-card" data-product-id="${p.id}">
             <div class="product-card-image">
               <img class="img-primary" src="${imgPrimary}" alt="${p.alt}" loading="lazy">
               <img class="img-hover" src="${imgHover}" alt="${p.alt}" loading="lazy">
-              ${oos ? '<div class="out-of-stock-badge">Out of Stock</div>' : ''}
             </div>
             <div class="product-card-info">
               <div class="product-card-name">${p.name}</div>
-              <div class="product-card-price">${oos ? '<span style="opacity:0.5;font-style:italic;">Out of Stock</span>' : formatPrice(p.price)}</div>
+              <div class="product-card-price">${formatPrice(p.price)}</div>
             </div>
-          </div>
+          </a>
         `;
       }).join('');
 
-      // Bind navigate to product detail (skip out-of-stock)
-      container.querySelectorAll('.product-card').forEach(card => {
-        if (card.dataset.outOfStock === 'true') return;
-        card.addEventListener('click', () => {
-          window.location.href = `/products/${card.dataset.productId}`;
-        });
-      });
+      
     })();
   </script>
 </body>

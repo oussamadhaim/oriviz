@@ -97,19 +97,17 @@
     container.innerHTML = products.map(p => {
       const imgPrimary = p.image.startsWith('/') ? p.image : '/' + p.image;
       const imgHover = p.imageAlt.startsWith('/') ? p.imageAlt : '/' + p.imageAlt;
-      const outOfStock = p.outOfStock ? true : false;
       return `
-        <div class="product-card${outOfStock ? ' out-of-stock' : ''}" data-product-id="${p.id}" ${outOfStock ? 'data-out-of-stock="true"' : ''}>
+        <a href="/products/${p.id}" class="product-card" data-product-id="${p.id}">
           <div class="product-card-image">
             <img class="img-primary" src="${imgPrimary}" alt="${p.alt}" loading="lazy">
             <img class="img-hover" src="${imgHover}" alt="${p.alt}" loading="lazy">
-            ${outOfStock ? '<div class="out-of-stock-badge">Out of Stock</div>' : ''}
           </div>
           <div class="product-card-info">
             <div class="product-card-name">${p.name}</div>
-            <div class="product-card-price">${outOfStock ? '<span style="opacity:0.5;font-style:italic;">Out of Stock</span>' : formatPrice(p.price)}</div>
+            <div class="product-card-price">${formatPrice(p.price)}</div>
           </div>
-        </div>
+        </a>
       `;
     }).join('');
 
@@ -117,17 +115,12 @@
     $$('.quick-add-btn', container).forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
+        e.preventDefault();
         addToCart(btn.dataset.id);
       });
     });
 
-    // Event: Navigate to product page
-    $$('.product-card', container).forEach(card => {
-      if (card.dataset.outOfStock === 'true') return;
-      card.addEventListener('click', () => {
-        window.location.href = `/products/${card.dataset.productId}`;
-      });
-    });
+
   }
 
   // --- BANNER IMAGES ---
@@ -413,20 +406,19 @@
     results.innerHTML = matches.map(p => {
       const imgUrl = p.image.startsWith('/') ? p.image : '/' + p.image;
       return `
-        <div class="search-result-item" data-id="${p.id}">
+        <a href="/products/${p.id}" class="search-result-item" data-id="${p.id}">
           <img src="${imgUrl}" alt="${p.alt}" loading="lazy">
           <div class="search-result-info">
             <div class="name">${p.name}</div>
             <div class="price">${formatPrice(p.price)}</div>
           </div>
-        </div>
+        </a>
       `;
     }).join('');
 
     $$('.search-result-item', results).forEach(item => {
       item.addEventListener('click', () => {
         closeSearch();
-        window.location.href = `/products/${item.dataset.id}`;
       });
     });
   }
@@ -706,7 +698,7 @@
       const imgHover = p.imageAlt.startsWith('/') ? p.imageAlt : '/' + p.imageAlt;
       
       return `
-        <div class="product-card" data-product-id="${p.id}">
+        <a href="/products/${p.id}" class="product-card" data-product-id="${p.id}">
           <div class="product-card-image">
             <img class="img-primary" src="${imgPrimary}" alt="${p.alt}" loading="lazy">
             <img class="img-hover" src="${imgHover}" alt="${p.alt}" loading="lazy">
@@ -715,7 +707,7 @@
             <div class="product-card-name">${p.name}</div>
             <div class="product-card-price">${formatPrice(p.price)}</div>
           </div>
-        </div>
+        </a>
       `;
     }).join('');
 
@@ -736,11 +728,7 @@
       });
     }
 
-    slider.querySelectorAll('.product-card').forEach(card => {
-      card.addEventListener('click', () => {
-        window.location.href = `/products/${card.dataset.productId}`;
-      });
-    });
+
   }
 
   // --- WHATSAPP BUTTON ---

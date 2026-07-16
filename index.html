@@ -2,6 +2,15 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) — Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B187VV1RZ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B187VV1RZ8');
+  </script>
+  <meta name="google-site-verification" content="adWeaHa-6d7JbkkgLvf3y-_S7iyGTeIRB60GRNZySuM" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ORIVIZ — Lunettes de créateur fabriquées à la main en acétate italien. Montures optiques et lunettes de soleil premium inspirées par l'art, livrées gratuitement au Maroc.">
   <meta name="keywords" content="lunettes maroc, lunettes de soleil maroc, montures optiques maroc, lunettes créateur, acétate italien, lunettes haut de gamme, oriviz, eyewear casablanca, acheter lunettes en ligne maroc, lunettes de vue maroc">
@@ -9,11 +18,13 @@
   <meta property="og:title" content="ORIVIZ | Lunettes de Créateur Fabriquées à la Main — Maroc">
   <meta property="og:description" content="Découvrez les lunettes ORIVIZ fabriquées artisanalement en acétate italien. Livraison gratuite sur tout le Maroc.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oriviz.com/">
+  <meta property="og:image" content="https://oriviz.com/images/hero.webp">
   <meta property="og:locale" content="fr_MA">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ORIVIZ | Lunettes de Créateur — Maroc">
   <meta name="twitter:description" content="Lunettes premium fabriquées à la main, inspirées par l'art et la culture. Livraison gratuite au Maroc.">
-  <title>ORIVIZ | Official website – Oriviz</title>
+  <title>ORIVIZ | Lunettes de Créateur Artisanales en Acétate Italien — Maroc</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
@@ -25,7 +36,7 @@
   <!-- ====== MENU DRAWER ====== -->
   <aside class="menu-drawer" aria-label="Navigation menu">
     <div class="drawer-header">
-      <span style="font-size:0.85rem;">Menu</span>
+      
       <button id="btn-menu-close" class="drawer-close" aria-label="Close menu">
         <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         Fermer
@@ -76,7 +87,7 @@
         <button id="search-close" style="font-size:0.85rem;opacity:0.6;">ÉCHAP</button>
       </div>
       <div id="search-results" class="search-results"></div>
-      <div class="search-close-hint">Appuyez sur ÉCHAP ou cliquez à l'extérieur pour fermer</div>
+      <div class="search-close-hint">Cliquez à l'extérieur pour fermer</div>
     </div>
   </div>
 
@@ -162,14 +173,14 @@
     <section class="brand-story-section">
       <div class="brand-story-container">
         <div class="brand-story-content">
-          <h2 class="brand-story-title">L'Esprit Oriviz</h2>
+          <h2 class="ugc-title" style="margin-bottom: 20px; margin-top: 0;">L'Esprit <span class="italic-accent">Oriviz</span></h2>
           <p class="brand-story-text">
             Inspirée par l'art, le design et la culture urbaine, Oriviz redéfinit la lunetterie contemporaine. Nos montures sont dessinées avec passion et fabriquées à la main avec les meilleurs acétates et verres de précision pour offrir une signature visuelle unique. Chaque paire raconte une histoire d'artisanat et d'audace stylistique.
           </p>
           <a href="/about" class="brand-story-btn">En savoir plus</a>
         </div>
         <div class="brand-story-image-wrap">
-          <img src="/images/oriviz-brand.png" alt="L'Esprit Oriviz" loading="lazy">
+          <img src="/images/oriviz-brand.webp" alt="L'Esprit Oriviz" loading="lazy">
         </div>
       </div>
     </section>
@@ -179,9 +190,9 @@
 
 
 
-    <!-- ===== PRODUCT CAROUSEL SECTION ===== -->
     <section class="product-carousel-section">
       <div class="product-carousel-header">
+        <h2 class="ugc-title">Nos créations <span class="italic-accent">les plus populaires</span></h2>
         <div class="product-carousel-nav">
           <button id="prod-prev" class="prod-nav-btn" aria-label="Précédent">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
@@ -202,7 +213,7 @@
       <div class="virtual-tryon-container">
         <h2 class="virtual-tryon-title">Voyez comment elles vous vont !</h2>
         <div class="virtual-tryon-image">
-          <img src="/images/virtual_tryon_mockup.png" alt="Essai Virtuel Oriviz" loading="lazy">
+          <img src="/images/virtual_tryon_mockup.webp" alt="Essai Virtuel Oriviz" loading="lazy">
         </div>
         <div class="virtual-tryon-btn-wrapper" id="tryon-wrapper">
           <button class="virtual-tryon-btn" type="button">
@@ -229,32 +240,25 @@
       
       <div class="ugc-carousel-container" id="ugc-carousel">
         <div class="ugc-card">
-          <img src="images/ugc_lily.png" alt="@LILYROWLAND1">
-          <div class="ugc-handle">@LILYROWLAND1</div>
+          <img src="images/ugc_lily.webp" alt="Style Oriviz">
         </div>
         <div class="ugc-card">
-          <img src="images/ugc_man_1.png" alt="@MARCUS.STYL">
-          <div class="ugc-handle">@MARCUS.STYL</div>
+          <img src="images/ugc_man_1.webp" alt="Style Oriviz">
         </div>
         <div class="ugc-card">
-          <img src="images/ugc_sofia.png" alt="@SOFIANCOHELO">
-          <div class="ugc-handle">@SOFIANCOHELO</div>
+          <img src="images/ugc_sofia.webp" alt="Style Oriviz">
         </div>
         <div class="ugc-card">
-          <img src="images/ugc_man_2.png" alt="@ARTHUR_K">
-          <div class="ugc-handle">@ARTHUR_K</div>
+          <img src="images/ugc_man_2.webp" alt="Style Oriviz">
         </div>
         <div class="ugc-card">
-          <img src="images/ugc_iris.png" alt="@IRISLOVEUNICORNS">
-          <div class="ugc-handle">@IRISLOVEUNICORNS</div>
+          <img src="images/ugc_iris.webp" alt="Style Oriviz">
         </div>
         <div class="ugc-card">
-          <img src="images/ugc_man_3.png" alt="@LEO.DESIGN">
-          <div class="ugc-handle">@LEO.DESIGN</div>
+          <img src="images/ugc_man_3.webp" alt="Style Oriviz">
         </div>
         <div class="ugc-card">
-          <img src="images/ugc_ella.png" alt="@ELLA.CHRISTO">
-          <div class="ugc-handle">@ELLA.CHRISTO</div>
+          <img src="images/ugc_ella.webp" alt="Style Oriviz">
         </div>
       </div>
     </section>
@@ -422,6 +426,56 @@
           <input type="email" placeholder="Adresse e-mail" required autocomplete="email">
           <button type="submit" class="newsletter-btn">S'abonner &rarr;</button>
         </form>
+      </div>
+    </section>
+
+    <!-- ===== REASSURANCE BANNER ===== -->
+    <section class="reassurance-section">
+      <div class="reassurance-container">
+        <div class="reassurance-item">
+          <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="1" y="3" width="15" height="13" rx="2" ry="2" />
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>
+          <div class="reassurance-content">
+            <h4>Livraison Gratuite</h4>
+            <p>Partout au Maroc sous 24h à 72h</p>
+          </div>
+        </div>
+        
+        <div class="reassurance-item">
+          <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="6" width="20" height="12" rx="2" />
+            <circle cx="12" cy="12" r="2" />
+            <path d="M6 12h.01M18 12h.01" />
+          </svg>
+          <div class="reassurance-content">
+            <h4>Paiement Sécurisé</h4>
+            <p>Paiement à la livraison</p>
+          </div>
+        </div>
+        
+        <div class="reassurance-item">
+          <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+          </svg>
+          <div class="reassurance-content">
+            <h4>Retours &amp; Échanges</h4>
+            <p>Retours faciles et gratuits sous 14 jours</p>
+          </div>
+        </div>
+        
+        <div class="reassurance-item">
+          <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          <div class="reassurance-content">
+            <h4>Garantie Qualité</h4>
+            <p>Acétate de créateur fait main</p>
+          </div>
+        </div>
       </div>
     </section>
 
