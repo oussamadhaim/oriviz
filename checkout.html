@@ -793,7 +793,7 @@
         }).catch(err => console.error('Erreur d\'envoi Google Sheet:', err));
       }
 
-      // Save order local state and show success
+      // Save order local state and redirect to /merci
       sendPromise.finally(() => {
         setTimeout(() => {
           let orders = JSON.parse(localStorage.getItem('oriviz_orders') || '[]');
@@ -803,10 +803,19 @@
           // Clear cart
           Cart.clear();
 
-          // Show success
-          document.getElementById('success-phone').textContent = order.customer.phone;
-          document.getElementById('success-order-id').textContent = order.id;
-          document.getElementById('success-overlay').classList.add('active');
+          // Build redirect URL with order data for tracking
+          const itemNames = order.items.map(i => i.name).join(',');
+          const params = new URLSearchParams({
+            id:    order.id,
+            name:  `${order.customer.firstName} ${order.customer.lastName}`,
+            phone: order.customer.phone,
+            city:  order.shipping.city,
+            total: order.total,
+            items: itemNames,
+            qty:   order.items.reduce((sum, i) => sum + (i.qty || 1), 0),
+          });
+
+          window.location.href = `/merci?${params.toString()}`;
         }, 800);
       });
     });

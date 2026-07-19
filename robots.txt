@@ -15,6 +15,7 @@ Allow: /products/
 # Bloquer les fichiers inutiles
 Disallow: /checkout
 Disallow: /cart
+Disallow: /merci
 Disallow: /js/
 Disallow: /css/
 Disallow: /*.json$

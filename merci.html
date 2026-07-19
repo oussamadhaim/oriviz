@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Google tag (gtag.js) — Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B187VV1RZ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B187VV1RZ8');
+  </script>
+
+  <meta name="google-site-verification" content="adWeaHa-6d7JbkkgLvf3y-_S7iyGTeIRB60GRNZySuM" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Commande Confirmée — Merci | ORIVIZ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --color-bg: #0a0a0a;
+      --color-text: #ffffff;
+      --color-gridline: #222;
+      --color-bg-alt: #111111;
+      --border-color: rgba(255,255,255,0.08);
+    }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Instrument Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Main merci section ── */
+    .merci-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+    }
+
+    .merci-card {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Checkmark animation ── */
+    .check-circle {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: rgba(253, 134, 112, 0.12);
+      border: 2px solid var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    .check-circle svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* ── Typography ── */
+    .merci-label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .merci-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .merci-subtitle {
+      font-size: 1rem;
+      opacity: 0.65;
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+
+    /* ── Order info box ── */
+    .order-info-box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 36px;
+      text-align: left;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 24px;
+    }
+
+    .order-info-item label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-bottom: 4px;
+    }
+
+    .order-info-item span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text);
+    }
+
+    .order-info-item.full {
+      grid-column: 1 / -1;
+    }
+
+    .order-id-badge {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Next steps ── */
+    .next-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .next-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+    }
+
+    .next-step-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(253, 134, 112, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .next-step-icon svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-accent);
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .next-step-text strong {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .next-step-text span {
+      font-size: 0.8rem;
+      opacity: 0.55;
+      line-height: 1.5;
+    }
+
+    /* ── CTA buttons ── */
+    .merci-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: #000;
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: #e0735e;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--color-text);
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* ── Reassurance strip ── */
+    .merci-reassurance {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border-color);
+      flex-wrap: wrap;
+    }
+
+    .merci-reassurance-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      opacity: 0.55;
+    }
+
+    .merci-reassurance-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-accent);
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      flex-shrink: 0;
+      opacity: 1;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .order-info-box {
+        grid-template-columns: 1fr;
+      }
+      .merci-actions {
+        flex-direction: column;
+      }
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left"></div>
+      <div class="header-center">
+        <a href="/" class="logo-link">
+          <img class="logo-img" src="/images/logo.png" alt="ORIVIZ">
+        </a>
+      </div>
+      <div class="header-right"></div>
+    </div>
+  </header>
+
+  <!-- ====== PAGE MERCI ====== -->
+  <main class="merci-main">
+    <div class="merci-card">
+
+      <!-- Checkmark -->
+      <div class="check-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+
+      <p class="merci-label">Commande confirmée</p>
+      <h1 class="merci-title">Merci pour votre commande !</h1>
+      <p class="merci-subtitle">
+        Nous avons bien reçu votre commande. Notre équipe vous contactera prochainement pour confirmer les détails de la livraison.
+      </p>
+
+      <!-- Order details box -->
+      <div class="order-info-box" id="order-info-box">
+        <div class="order-info-item full">
+          <label>Numéro de commande</label>
+          <span class="order-id-badge" id="info-order-id">—</span>
+        </div>
+        <div class="order-info-item">
+          <label>Nom</label>
+          <span id="info-name">—</span>
+        </div>
+        <div class="order-info-item">
+          <label>Téléphone</label>
+          <span id="info-phone">—</span>
+        </div>
+        <div class="order-info-item">
+          <label>Ville</label>
+          <span id="info-city">—</span>
+        </div>
+        <div class="order-info-item">
+          <label>Total</label>
+          <span id="info-total">—</span>
+        </div>
+      </div>
+
+      <!-- Next steps -->
+      <div class="next-steps">
+        <div class="next-step">
+          <div class="next-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="next-step-text">
+            <strong>Confirmation par appel</strong>
+            <span>Notre équipe vous contacte sous 24h pour confirmer la livraison</span>
+          </div>
+        </div>
+        <div class="next-step">
+          <div class="next-step-icon">
+            <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div class="next-step-text">
+            <strong>Livraison gratuite 24h – 72h</strong>
+            <span>Partout au Maroc, paiement à la livraison</span>
+          </div>
+        </div>
+        <div class="next-step">
+          <div class="next-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div class="next-step-text">
+            <strong>Une question ?</strong>
+            <span>Contactez-nous sur WhatsApp, on répond rapidement</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="merci-actions">
+        <a href="/shop" class="btn-primary" id="btn-shop-again">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Continuer mes achats
+        </a>
+        <a href="/" class="btn-secondary">
+          Retour à l'accueil
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ====== REASSURANCE STRIP ====== -->
+  <div class="merci-reassurance">
+    <div class="merci-reassurance-item">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Garantie qualité acétate
+    </div>
+    <div class="merci-reassurance-item">
+      <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      Livraison gratuite au Maroc
+    </div>
+    <div class="merci-reassurance-item">
+      <svg viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+      Retours sous 14 jours
+    </div>
+  </div>
+
+  <!-- ====== TRACKING & DATA ====== -->
+  <script>
+    (function() {
+      // --- Lire les paramètres URL passés depuis checkout.html ---
+      const params = new URLSearchParams(window.location.search);
+      const orderId = params.get('id') || '';
+      const name    = params.get('name') || '';
+      const phone   = params.get('phone') || '';
+      const city    = params.get('city') || '';
+      const total   = params.get('total') || '';
+      const items   = params.get('items') || '';
+      const qty     = parseInt(params.get('qty') || '1', 10);
+
+      // --- Afficher dans la page ---
+      if (orderId) document.getElementById('info-order-id').textContent = orderId;
+      if (name)    document.getElementById('info-name').textContent = name;
+      if (phone)   document.getElementById('info-phone').textContent = phone;
+      if (city)    document.getElementById('info-city').textContent = city;
+      if (total)   document.getElementById('info-total').textContent = total + ' DH';
+
+      // --- GA4 — Événement purchase (conversion) ---
+      if (typeof gtag !== 'undefined' && total) {
+        gtag('event', 'purchase', {
+          transaction_id: orderId,
+          value: parseFloat(total),
+          currency: 'MAD',
+          items: items ? items.split(',').map(function(name, i) {
+            return { item_name: name.trim(), item_id: name.trim().toLowerCase().replace(/\s+/g, '-'), quantity: 1 };
+          }) : [],
+        });
+      }
+
+      // --- GA4 — Événement personnalisé "order_confirmed" ---
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'order_confirmed', {
+          order_id: orderId,
+          order_value: parseFloat(total) || 0,
+          order_city: city,
+          payment_method: 'COD',
+        });
+      }
+
+      // --- Empêcher le retour en arrière (éviter double-commande) ---
+      history.pushState(null, '', window.location.href);
+      window.addEventListener('popstate', function() {
+        history.pushState(null, '', window.location.href);
+      });
+    })();
+  </script>
+
+</body>
+</html>
