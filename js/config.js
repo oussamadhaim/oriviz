@@ -203,5 +203,5 @@ const CONFIG = {
     { hash: '1841e32eb964404fa9dfef17aa0754f23a9dffa35ed2244c92ae5b2cb52ba161', type: 'fixed', value: 50 },
   ],
 
-  googleSheetsWebhookUrl: '', // Collez ici l'URL de votre Web App Google Apps Script
+  googleSheetsWebhookUrl: 'https://script.google.com/macros/s/AKfycbybv8_yb8bmG534P6Q_bGk-vmxtowzaJtZ7filUqtvY5h2N5uw4dHLqyuovs05j_Ni4hg/exec',
 };
